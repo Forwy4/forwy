@@ -1244,4 +1244,7 @@ a:hover.textcontrol {
         color: white;
         text-decoration: none;
     }
+    #memberlist_table td.alt1 {
+        background: var(--main-bg-color);
+    }
 }
