@@ -1247,4 +1247,9 @@ a:hover.textcontrol {
     #memberlist_table td.alt1 {
         background: var(--main-bg-color);
     }
+    .memberaction_body.popupbody li a:hover {
+	color:#000;
+	background-color:#c8c8c8;
+    text-decoration: none;
+    }
 }
