@@ -1228,17 +1228,17 @@ a:hover.textcontrol {
         text-decoration: underline;
     }
     #charnav dd a:hover {
-        background: #f5f5f5ba;
+        background: #f5f5f559;
         border: 1px solid #ffffffbd;
         color: black;
         border-radius: 10px;
         font-weight: bold;
     }
     .posterlist .blockrow {
-        background: var(--color-font);
+        background: #4b4b4b;
     }
     a.username.offline {
-        color: #515151;
+        color: #bebebe;
     }
     a.username.offline:hover {
         color: white;
