@@ -7,10 +7,12 @@
 ==/UserStyle== */
 @-moz-document domain("forum.wowcircle.com") {
    :root {
-      --color-font: #dbdbdb;
-      --main-bg-color: #202020;
-      --black-bg-color: #424242;
+      --color-font: #e6e4e4;
+      --main-bg-color: #2d2d2d;
+      --black-bg-color: #555;
       --border: #cacaca;
+      --quote: #626db1;
+      --border-quote: #757eb7;
    }
    *::selection {
       color: black;
@@ -34,31 +36,31 @@
    }
    * {
       font-family: sans-serif;
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--color-font);
    }
    a:link,
    #sidebar_container a,
    #sidebar_container.member_summary .textcontrol,
-   li.userprof_content a {
-      font-size: 13px;
+   li.userprof_content a, li.activitybit a {
+      font-size: 12px;
       color: var(--color-font);
       transition: 0.5s ease
    }
    a:link:hover,
    #sidebar_container a:hover,
    #sidebar_container.member_summary .textcontrol:hover,
-   li.userprof_content a:hover {
-      font-size: 13px;
+   li.userprof_content a:hover, li.activitybit a:hover {
+      font-size: 12px;
       color: white;
       transition: 0.5s ease
    }
    a:hover {
-      font-size: 13px;
+      font-size: 12px;
       color: white;
       transition: 0.5s ease
    }
-   .time {
+   .time, .footer_time, .below_body .time, .shade, .above_threadlist .threadpagenav .threadpagestats, .userprof_content .time {
       color: var(--color-font);
    }
    #header img {
@@ -79,10 +81,6 @@
    a[onclick*="imwindow('skype',"] img {
       content: url(images/misc/im_skype.gif);
    }
-   div .lastposttitle img {
-      content: url(https://i.imgur.com/TiPzLfU.png);
-      border-radius: 2px;
-   }
    .above_body {
       background: var(--main-bg-color);
       margin: 0px 0px 10px 0px;
@@ -99,7 +97,10 @@
       -webkit-border-radius: 5px;
       border-radius: 5px;
    }
-   .forumhead {
+   /*Шапки*/
+   .forumhead,
+   .threadlisthead,
+   .postbit .posthead, h2.searchlisthead {
       background-color: var(--main-bg-color);
       padding: 0;
       font: bold 13px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
@@ -111,6 +112,42 @@
       border-top-right-radius: 5px;
       border-top-left-radius: 5px;
    }
+   /*Еще шапки в постах*/
+   .postbit .posthead,
+   .postbitlegacy .posthead,
+   .eventbit .eventhead {
+      background: none;
+      background-color: var(--main-bg-color);
+      _background-image: none;
+      border: 1px var(--border) solid;
+      clear: both;
+      display: block;
+      float: left;
+      width: 100%;
+      color: #ffffff;
+      margin: -1px -1px 0;
+      font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      padding: 4px 0;
+   }
+   #forum_icon_legend h5 {
+    font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+    border: 1px var(--border) solid;
+    background: var(--black-bg-color) none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+   .formcontrols fieldset.blockrow legend {
+    color: var(--color-font);
+    font-size: 12px;
+    font-weight: bold;
+}
+   .formcontrols .blockrow {
+    background: none;
+    border-top: solid 1px #cedfeb;
+    padding: 10px 5px;
+}
    .forumbit_nopost .forumhead .forumtitle a {
       margin-left: 10px;
    }
@@ -120,10 +157,6 @@
    }
    body a:hover {
       color: var(--color-font);
-   }
-   .forumhead + .childforum .L2:first-child .forumrow,
-   .forumhead + .L2 .forumrow {
-      border-top: 110;
    }
    .forumbit_nopost .forumbit_nopost .forumrow,
    .forumbit_post .forumrow {
@@ -135,6 +168,7 @@
       border-bottom: 1px solid #c4c4c4;
       border-left: 1px solid #c4c4c4;
       border-right: 1px solid #c4c4c4;
+      background-color: var(--black-bg-color);
    }
    .notices li {
       background: var(--black-bg-color) none;
@@ -162,7 +196,7 @@
       background: var(--main-bg-color) none;
       margin: 10px 0px 0px 0px;
       color: var(--color-font);
-      font: 11px sans-serif;
+      font: 12px sans-serif;
       border: 0px solid;
    }
    .navtabs {
@@ -229,7 +263,6 @@
    .forumbit_nopost .forumbit_nopost .forumrow,
    .forumbit_post .forumrow {
       color: var(--color-font);
-      background: none;
       display: block;
       width: 100%;
       float: left;
@@ -243,6 +276,7 @@
    .forumhead + .L2 .forumrow {
       background: none;
       border-top: 0;
+      background-color: var(--black-bg-color);
    }
    .toplinks {
       position: absolute;
@@ -345,17 +379,20 @@
       font: normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
    }
    .popupbody li a:hover,
+   .popupbody li > label:hover,
    .toplinks .nonotifications .popupbody a:hover,
    #usercp_nav .blockrow * a:hover {
       background-color: var(--color-font);
       color: black;
    }
-   #usercp_nav li a.usercp_folder-left {
-      background-color: var(--main-bg-color);
+   #usercp_nav li a.usercp_folder-left,
+   #usercp_nav .blockrow * a {
+      background-color: var(--black-bg-color);
       border: 1px white solid;
+      font-size: 12px;
    }
    #usercp_nav .blockbody {
-      background-color: var(--main-bg-color);
+      background: none, none;
       border: none;
    }
    .blockfoot,
@@ -364,79 +401,158 @@
       border: none;
       background: none;
    }
+   /*Черный с границей*/
    .blockhead,
-   #sidebar_container.member_summary,
-   #sidebar_container .userprof_content .blockrow,
-   #usercp_nav .blockrow * a,
-   .pmlist .blockrow,
-   #forum_icon_legend h5,
-   li.userprof_content_border,
-   #activity_tab_container > div,
-   .above_threadlist .newcontent_textcontrol,
-   .threadbit .threadstatus,
-   .threadbit .threadinfo,
-   .threadbit .threadinfo_withnotification,
-   .threadbit .threadstats,
-   .threadbit .threadlastpost,
-   .threadbit .threaddeleted,
-   .threadbit .threadnotification,
-   .threadbit .nothreadstatus,
-   .threadbit .threadthread,
-   .threadbit img.statusicon,
-   .threadlisthead,
-   .below_threadlist .newcontent_textcontrol,
-   .pagination span a.popupctrl,
-   .pagination span.selected a,
-   .pagination span a,
-   .blockbody.settings_form_border,
-   h2.searchlisthead,
-   .threadbit .alt,
+   .postbit .postfoot .textcontrols,
+   .postbitlegacy .postfoot .textcontrols,
+   .eventbit .eventfoot .eventcontrols {
+      background-color: var(--main-bg-color);
+      border-top: 2px var(--border) solid;
+      border-left: 0px var(--border) solid;
+      border-right: 1px var(--border) solid;
+      border-bottom: 0px var(--border) solid;
+   }
+   /*Черный без границы (закругление границы)*/
+   .postbitlegacy .postdetails {
+      background-color: var(--main-bg-color);
+      border-radius: 2px;
+   }
+   /*Серый с границей*/
+   .sortrow,
+   .pmlist .blockrow, #sidebar_container .userprof_content .blockrow, .userprof_headers, .forum_info .blockbody {
+      background: var(--black-bg-color) none;
+      border-bottom: 1px var(--border) solid;
+      border-left: 4px var(--border) solid;
+      margin: 2px 2px 2px 2px;
+   }
+   /*Серый без границы*/
    .blockrow,
-   .newcontent_textcontrol,
-   .postbitlegacy .postbody,
-   .eventbit .eventdetails .eventbody,
-   .postbit .posthead,
-   .postbitlegacy .posthead,
-   .eventbit .eventhead,
-   li.sgicon .maincol,
-   #sidebar li.sgicon .maincol,
-   #sidebar_container .block,
-   li.sgicon .controls a.textcontrol,
+   .summaryinfo.pos,
+   .blockbody.settings_form_border,
+   .blocksubhead, .formcontrols > *:first-child, .formcontrols .blocksubhead + .blockrow, .formcontrols .section .blockrow:first-child, .formcontrols .section, .formcontrols, .member_content #sidebar_container div.block, #sidebar_container.member_summary {
+      background-color: var(--black-bg-color);
+      border-radius: 2px;
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+      border: none;
+      border-top: none;
+      color: var(--color-font);
+   }
+   /*Кнопки*/
    .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok,
    .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel,
    .textcontrols a,
    a.textcontrol,
-   .navpopupmenu.popupmenu.nohovermenu a.textcontrol:hover,
-   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
    .navpopupmenu.popupmenu.nohovermenu a.textcontrol,
    .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
-   .userprof_button,
-   .spoiler > h2 {
-      background-color: var(--main-bg-color);
+   .above_threadlist .newcontent_textcontrol,
+   .below_threadlist .newcontent_textcontrol,
+   .above_postlist .newcontent_textcontrol,
+   .noinlinemod.below_postlist .newcontent_textcontrol,
+   .actionbuttons .group .button, .newcontent_textcontrol {
+      position: relative;
+      padding: 3px 5px;
+      font: bold 12px sans-serif;
+      line-height: 1.230;
+      text-decoration: none;
+      border: 1px var(--border) solid;
+      color: var(--color-font);
+      background: var(--main-bg-color) none;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      transition: 0.2s ease;
+   }
+   /*Кнопки hover*/
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok,
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel,
+   .textcontrols a,
+   a.textcontrol:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.textcontrol:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .above_threadlist .newcontent_textcontrol:hover,
+   .below_threadlist .newcontent_textcontrol:hover,
+   .above_postlist .newcontent_textcontrol:hover,
+   .noinlinemod.below_postlist .newcontent_textcontrol:hover,
+   .actionbuttons .group .button:hover, .newcontent_textcontrol:hover {
+      position: relative;
+      padding: 3px 5px;
+      font: bold 12px sans-serif;
+      line-height: 1.230;
+      text-decoration: none;
       border: 1px white solid;
-      border-radius: 2px;
+      color: white;
+      background: none;
+      background-color: var(--black-bg-color);
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 10px;
+      transition: 0.2s ease;
    }
-   .postbitlegacy .postdetails,
-   .eventbit .eventdetails,
-   .postbitlegacy .userinfo,
-   #content .blockrow > li,
-   #content .blockrow > ol,
-   #content .blockrow > div,
-   #sidebar li.sgicon,
-   .spoiler > div {
-      background-color: var(--main-bg-color);
-      border-radius: 2px;
+   /*Кнопка "Вверх"*/
+   .postbitlegacy .postfoot .textcontrols a,
+   .postbit .postfoot .textcontrols a,
+   .eventbit .eventfoot .eventcontrols a,
+   .postbitlegacy .postfoot .textcontrols span.mobile,
+   .postbit .postfoot .textcontrols span.mobile {
+      padding: 3px;
+      padding-left: 23px;
+      border: 0px solid #a8a8a8;
+      color: var(--black-bg-color);
+      background-color: white;
+      font: bold 12px sans-serif;
+      display: inline-block;
+      transition: 0.2s ease;
    }
+   /*Кнопка "Вверх" hover*/
+   .postbitlegacy .postfoot .textcontrols a:hover,
+   .postbit .postfoot .textcontrols a:hover,
+   .eventbit .eventfoot .eventcontrols a:hover,
+   .postbitlegacy .postfoot .textcontrols span.mobile:hover,
+   .postbit .postfoot .textcontrols span.mobile:hover {
+      background-color: white;
+      color: var(--main-bg-color);
+   }
+   /*Кнопка Пожаловаться*/
+   .postbitlegacy .postfoot .textcontrols a.infraction,
+   .postbit .postfoot .textcontrols a.infraction {
+      background-color: white;
+      color: white;
+   }
+   /*Кнопки переключения страниц*/
+   .pagination span a.popupctrl, .pagination span a, .pagination span a:link {
+    background: var(--main-bg-color) none;
+      font: normal 13px sans-serif;
+    padding-right: 4px;
+    padding-left: 9px;
+     border: 1px var(--border) solid;
+      color: var(--color-font);
+}
+   /*Кнопки переключения страниц hover*/
+   .pagination span a.popupctrl:hover, .pagination span a:hover, .pagination span a:link:hover {
+    background: var(--black-bg-color) none;
+      font: normal 13px sans-serif;
+    padding-right: 4px;
+    padding-left: 9px;
+     border: 1px var(--border) solid;
+      color: white;
+}
    .threadbit .nonsticky,
    .threadbit .discussionrow,
-   .threadbit .sticky {
-      background: none;
-      border: 3px var(--main-bg-color) solid;
+   .threadbit .sticky, .threadbit .alt {
+      background: var( --black-bg-color) none;
+      border-bottom: 1px var(--border) solid;
+      margin: 0;
+      padding: 1px;
    }
-   .pagination span a:hover,
-   .pagination span a:link {
-      border: 1px white solid;
-      color: var(--color-font);
+   .threadbit .alt {
+      background: var( --black-bg-color) none;
+      border-bottom: 0px var(--border) solid;
+      margin: 0;
+      padding: 1px;
    }
    .navtabs .popupbody {
       border: none;
@@ -446,4 +562,71 @@
    .navtabs .popupbody li {
       border-top: 1px black solid;
    }
+   /*Сообщения в постах*/
+   .postbitlegacy .userinfo {
+      float: left;
+      position: relative;
+      width: 180px;
+      padding: 2px 10px 5px;
+      font-size: 11px;
+      display: block;
+      background: none;
+      clear: both;
+   }
+   /*Цитаты quote*/
+   .bbcode_quote div.quote_container,
+   .bbcode_container div.bbcode_quote {
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 15px;
+      padding: 5px 10px 5px 10px;
+      background-color: var(--quote);
+      border-color: var(--border-quote);
+      background: linear-gradient(to left, #a4a0a0, var(--quote));
+      vertical-align: middle;
+   }
+   /*Кнопка возле цитат*/
+   .bbcode_container .bbcode_quote_container {
+      background: none;
+   }
+   .above_postlist .pagination_top .pagination,
+   .above_postlist .pagination_top .postpagestats {
+      color: var(--color-font);
+   }
+   .postbitlegacy .postbody,
+   .eventbit .eventdetails .eventbody {
+      margin-left: 200px;
+      border-left: 1px solid var(--border);
+      background: none;
+      _background-image: none;
+      padding-bottom: 1em;
+   }
+   .blocksubhead a {
+      color: var(--color-font);
+      text-decoration: none;
+   }
+   .blocksubhead a:hover {
+      color: white;
+      text-decoration: none;
+   }
+   dl.stats dt {
+      color: var(--color-font);
+   }
+   .navtabs > ul.floatcontainer li a, .navbar_advanced_search li a {
+    text-decoration: none;
+    font: 12px sans-serif;
+    line-height: 26px;
+}
+   /*Сообщения в профиле (лента)*/
+   li.activitybit {
+    overflow: hidden;
+    color: #3E3E3E;
+    font-weight: normal;
+    font-family: inherit;
+    font-size: 11px;
+    margin: 0px 0px 10px 0px;
+    border: 0 none;
+    padding: 10px;
+    background: var(--black-bg-color) none;
+}
 }
