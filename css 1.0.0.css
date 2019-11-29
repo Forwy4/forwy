@@ -42,7 +42,8 @@
    a:link,
    #sidebar_container a,
    #sidebar_container.member_summary .textcontrol,
-   li.userprof_content a, li.activitybit a {
+   li.userprof_content a,
+   li.activitybit a {
       font-size: 12px;
       color: var(--color-font);
       transition: 0.5s ease
@@ -50,7 +51,8 @@
    a:link:hover,
    #sidebar_container a:hover,
    #sidebar_container.member_summary .textcontrol:hover,
-   li.userprof_content a:hover, li.activitybit a:hover {
+   li.userprof_content a:hover,
+   li.activitybit a:hover {
       font-size: 12px;
       color: white;
       transition: 0.5s ease
@@ -60,7 +62,12 @@
       color: white;
       transition: 0.5s ease
    }
-   .time, .footer_time, .below_body .time, .shade, .above_threadlist .threadpagenav .threadpagestats, .userprof_content .time {
+   .time,
+   .footer_time,
+   .below_body .time,
+   .shade,
+   .above_threadlist .threadpagenav .threadpagestats,
+   .userprof_content .time {
       color: var(--color-font);
    }
    #header img {
@@ -100,7 +107,8 @@
    /*Шапки*/
    .forumhead,
    .threadlisthead,
-   .postbit .posthead, h2.searchlisthead {
+   .postbit .posthead,
+   h2.searchlisthead {
       background-color: var(--main-bg-color);
       padding: 0;
       font: bold 13px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
@@ -130,24 +138,24 @@
       padding: 4px 0;
    }
    #forum_icon_legend h5 {
-    font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
-    border: 1px var(--border) solid;
-    background: var(--black-bg-color) none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 5px 10px;
-}
+      font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      border: 1px var(--border) solid;
+      background: var(--black-bg-color) none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 5px 10px;
+   }
    .formcontrols fieldset.blockrow legend {
-    color: var(--color-font);
-    font-size: 12px;
-    font-weight: bold;
-}
+      color: var(--color-font);
+      font-size: 12px;
+      font-weight: bold;
+   }
    .formcontrols .blockrow {
-    background: none;
-    border-top: solid 1px #cedfeb;
-    padding: 10px 5px;
-}
+      background: none;
+      border-top: solid 1px #cedfeb;
+      padding: 10px 5px;
+   }
    .forumbit_nopost .forumhead .forumtitle a {
       margin-left: 10px;
    }
@@ -419,7 +427,10 @@
    }
    /*Серый с границей*/
    .sortrow,
-   .pmlist .blockrow, #sidebar_container .userprof_content .blockrow, .userprof_headers, .forum_info .blockbody {
+   .pmlist .blockrow,
+   #sidebar_container .userprof_content .blockrow,
+   .userprof_headers,
+   .forum_info .blockbody {
       background: var(--black-bg-color) none;
       border-bottom: 1px var(--border) solid;
       border-left: 4px var(--border) solid;
@@ -429,7 +440,14 @@
    .blockrow,
    .summaryinfo.pos,
    .blockbody.settings_form_border,
-   .blocksubhead, .formcontrols > *:first-child, .formcontrols .blocksubhead + .blockrow, .formcontrols .section .blockrow:first-child, .formcontrols .section, .formcontrols, .member_content #sidebar_container div.block, #sidebar_container.member_summary {
+   .blocksubhead,
+   .formcontrols > *:first-child,
+   .formcontrols .blocksubhead + .blockrow,
+   .formcontrols .section .blockrow:first-child,
+   .formcontrols .section,
+   .formcontrols,
+   .member_content #sidebar_container div.block,
+   #sidebar_container.member_summary {
       background-color: var(--black-bg-color);
       border-radius: 2px;
       border-right: none;
@@ -451,7 +469,8 @@
    .below_threadlist .newcontent_textcontrol,
    .above_postlist .newcontent_textcontrol,
    .noinlinemod.below_postlist .newcontent_textcontrol,
-   .actionbuttons .group .button, .newcontent_textcontrol {
+   .actionbuttons .group .button,
+   .newcontent_textcontrol {
       position: relative;
       padding: 3px 5px;
       font: bold 12px sans-serif;
@@ -477,7 +496,8 @@
    .below_threadlist .newcontent_textcontrol:hover,
    .above_postlist .newcontent_textcontrol:hover,
    .noinlinemod.below_postlist .newcontent_textcontrol:hover,
-   .actionbuttons .group .button:hover, .newcontent_textcontrol:hover {
+   .actionbuttons .group .button:hover,
+   .newcontent_textcontrol:hover {
       position: relative;
       padding: 3px 5px;
       font: bold 12px sans-serif;
@@ -523,26 +543,31 @@
       color: white;
    }
    /*Кнопки переключения страниц*/
-   .pagination span a.popupctrl, .pagination span a, .pagination span a:link {
-    background: var(--main-bg-color) none;
+   .pagination span a.popupctrl,
+   .pagination span a,
+   .pagination span a:link {
+      background: var(--main-bg-color) none;
       font: normal 13px sans-serif;
-    padding-right: 4px;
-    padding-left: 9px;
-     border: 1px var(--border) solid;
+      padding-right: 4px;
+      padding-left: 9px;
+      border: 1px var(--border) solid;
       color: var(--color-font);
-}
+   }
    /*Кнопки переключения страниц hover*/
-   .pagination span a.popupctrl:hover, .pagination span a:hover, .pagination span a:link:hover {
-    background: var(--black-bg-color) none;
+   .pagination span a.popupctrl:hover,
+   .pagination span a:hover,
+   .pagination span a:link:hover {
+      background: var(--black-bg-color) none;
       font: normal 13px sans-serif;
-    padding-right: 4px;
-    padding-left: 9px;
-     border: 1px var(--border) solid;
+      padding-right: 4px;
+      padding-left: 9px;
+      border: 1px var(--border) solid;
       color: white;
-}
+   }
    .threadbit .nonsticky,
    .threadbit .discussionrow,
-   .threadbit .sticky, .threadbit .alt {
+   .threadbit .sticky,
+   .threadbit .alt {
       background: var( --black-bg-color) none;
       border-bottom: 1px var(--border) solid;
       margin: 0;
@@ -612,21 +637,22 @@
    dl.stats dt {
       color: var(--color-font);
    }
-   .navtabs > ul.floatcontainer li a, .navbar_advanced_search li a {
-    text-decoration: none;
-    font: 12px sans-serif;
-    line-height: 26px;
-}
+   .navtabs > ul.floatcontainer li a,
+   .navbar_advanced_search li a {
+      text-decoration: none;
+      font: 12px sans-serif;
+      line-height: 26px;
+   }
    /*Сообщения в профиле (лента)*/
    li.activitybit {
-    overflow: hidden;
-    color: #3E3E3E;
-    font-weight: normal;
-    font-family: inherit;
-    font-size: 11px;
-    margin: 0px 0px 10px 0px;
-    border: 0 none;
-    padding: 10px;
-    background: var(--black-bg-color) none;
-}
+      overflow: hidden;
+      color: #3E3E3E;
+      font-weight: normal;
+      font-family: inherit;
+      font-size: 11px;
+      margin: 0px 0px 10px 0px;
+      border: 0 none;
+      padding: 10px;
+      background: var(--black-bg-color) none;
+   }
 }
