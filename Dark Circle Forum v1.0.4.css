@@ -770,7 +770,7 @@
       padding-right: 4px;
       padding-left: 9px;
       border: 1px var(--border) solid;
-      color: var(--color-font);
+      color: var(--color-font) !important;
    }
    /*Кнопки переключения страниц hover*/
    .pagination span a.popupctrl:hover,
