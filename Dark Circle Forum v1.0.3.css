@@ -1,0 +1,1229 @@
+/* ==UserStyle==
+@name           Dark Circle Forum
+@namespace      https://github.com/Forwy4/forwy
+@version        1.0.3
+@description    Dark style for forum.wowcircle.com
+@author         Forwy
+==/UserStyle== */
+@-moz-document domain("forum.wowcircle.com") {
+   :root {
+      --color-font: #c4c1c1;
+      --main-bg-color: #2d2d2d;
+      --black-bg-color: #555;
+      --border: #cacaca;
+      --quote: #626db1;
+      --border-quote: #757eb7;
+      --links-color: #fff;
+   }
+   /*Одинковый цвет для всего текста*/
+   .postbitlegacy .postrow,
+   .eventbit .eventrow,
+   .postbitdeleted .postrow,
+   .postbitignored .postrow,
+   #pagetitle h1,
+   .postbitlegacy .userinfo .rank,
+   .postbitlegacy .userinfo .usertitle,
+   .postbitlegacy dl.userinfo_extra dt,
+   .postbitlegacy dl.user_rep dt,
+   .postbitlegacy dl.userinfo_extra dd,
+   .postbitlegacy dl.userinfo_extra dd a,
+   .postbitlegacy dl.user_rep dd,
+   .breadcrumb .navbit.lastnavbit span,
+   address,
+   caption,
+   cite,
+   code,
+   dfn,
+   em,
+   strong,
+   th,
+   var,
+   optgroup,
+   .breadcrumb .navbit.lastnavbit span,
+   li.activitybit .content .title,
+   #sidebar_container.member_summary .mainblock .usertitle,
+   #sidebar_container.member_summary .blocksubhead.smaller,
+   .userprof_content .shade,
+   .signaturecontainer,
+   div.body_wrapper,
+   .userprof_content,
+   li.userprof_content {
+      font-family: system-ui;
+      color: var(--color-font) !important;
+   }
+   /*Выделяемый текст*/
+   h3,
+   .moreactivity span,
+   .userprof_title,
+   #sidebar_container.member_summary h1,
+   li.sgicon .maincol p.description,
+   #sidebar_container .blocksubhead span.blocktitle {
+      font-family: system-ui;
+      color: white !important;
+   }
+   /*Малозаметный текст*/
+   .formcontrols .blockrow .description,
+   .footer_copyright,
+   .footer_morecopyright,
+   .footer_time,
+   .threadbit .alt,
+   dd,
+   .threadbit .threadmeta,
+   .shade,
+   #activitylist li.activitybit .excerpt,
+   li.activitybit .content .datetime,
+   li.activitybit .views,
+   #sidebar_container .userprof_content .blockrow,
+   #pagetitle .description,
+   .forumbit_nopost .subforumdescription,
+   div#postpagestats {
+      font-family: system-ui;
+      color: #ada4a4;
+   }
+   /*Цвет текста в коде BB/PHP*/
+   .bbcode_container div.bbcode_code,
+   .bbcode_container pre.bbcode_code {
+      margin: 0;
+      padding: 6px;
+      border: 1px inset;
+      text-align: left;
+      overflow: scroll;
+      direction: ltr;
+      background: #f2f6f8 none repeat-x;
+      font-size: 12px;
+      color: black;
+   }
+   *::selection {
+      color: black;
+      background-color: yellow;
+   }
+   *::-webkit-scrollbar {
+      width: 15px !important;
+      height: 10px !important;
+      background: var(--main-bg-color) !important;
+      border: 1px solid var(--main-bg-color) !important;
+      transition: 1s ease;
+      opacity: 0.5;
+   }
+   .scrollbar:hover {
+      transition: 1s ease;
+      opacity: 1;
+   }
+   *::-webkit-scrollbar-thumb {
+      min-height: 28px !important;
+      background: var(--black-bg-color) !important;
+   }
+   a:link,
+   a:visited,
+   a:active,
+   #sidebar_container a,
+   #sidebar_container.member_summary .textcontrol,
+   li.userprof_content a,
+   li.activitybit a,
+   strong,
+   #sidebar_container .userprof_content a,
+   #sidebar_container .userprof_content a {
+      font-size: 12px;
+      font-family: system-ui;
+      color: var(--links-color);
+      transition: 0.5s ease
+   }
+   a:hover,
+   li.activitybit a:hover,
+   #sidebar_container a:hover,
+   #sidebar_container .userprof_content a:hover,
+   #sidebar_container .userprof_content a:hover,
+   .userprof_headers a:hover,
+   .member_content a:hover {
+      font-size: 12px;
+      color: var(--color-font);
+      transition: 0.5s ease
+   }
+   #header img {
+      content: url("https://i.imgur.com/TFAfdOC.png")
+   }
+   .pagination span.prev_next a[rel*="prev"] img {
+      content: url(https://i.imgur.com/0QugXcl.png);
+   }
+   .pagination span.prev_next a[rel*="next"] img {
+      content: url(https://i.imgur.com/WQ7LZH7.png);
+   }
+   .pagination span.first_last a[rel*="start"] img {
+      content: url(https://i.imgur.com/KNy2dU9.png);
+   }
+   .pagination span.first_last a img {
+      content: url(https://i.imgur.com/sum0WOX.png);
+   }
+   a[onclick*="imwindow('skype',"] img {
+      content: url(images/misc/im_skype.gif);
+   }
+   a.close {
+      content: url(https://www.janssen.com/sites/all/themes/janssen/debug/images/close-button.png);
+   }
+   .postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover,
+   .postbit .postfoot .textcontrols a.post_thanks_button:hover {
+      background: url(https://i.imgur.com/bqUFVXn.png) no-repeat transparent left;
+      opacity: 1;
+   }
+   .postbitlegacy .postfoot .textcontrols a.post_thanks_button,
+   .postbit .postfoot .textcontrols a.post_thanks_button {
+      background: url(https://i.imgur.com/bqUFVXn.png) no-repeat transparent left;
+      opacity: 0.9;
+   }
+
+   .above_body {
+      background: var(--main-bg-color);
+      margin: 0px 0px 10px 0px;
+      padding: 0px 0px 0px 0px;
+   }
+   html {
+      box-shadow: inset 5px -20px 20px 5px var(--black-bg-color);
+      background: var(--main-bg-color);
+   }
+   .body_wrapper {
+      padding: 10px 20px 10px 20px;
+      background: var(--main-bg-color) none;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+   }
+   /*Шапки*/
+   .forumhead,
+   .threadlisthead,
+   .postbit .posthead,
+   h2.searchlisthead {
+      background: var(--main-bg-color) none;
+      padding: 0;
+      font: bold 13px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      clear: both;
+      margin-top: 8px;
+      float: left;
+      border: 1px solid var(--border);
+      width: 100%;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+   }
+   /*Еще шапки в постах*/
+   .postbit .posthead,
+   .postbitlegacy .posthead,
+   .eventbit .eventhead {
+      background-color: var(--main-bg-color);
+      border-radius: 3px;
+      border: 1px var(--border) solid;
+      clear: both;
+      display: block;
+      float: left;
+      width: 100%;
+      color: #ffffff;
+      margin: -1px -1px 0;
+      font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      padding: 4px 0;
+   }
+   .blockhead {
+      background: var(--main-bg-color) none;
+      border-top: 1px var(--border) solid;
+      border-left: 0px var(--border) solid;
+      border-right: 0px var(--border) solid;
+      border-bottom: 0px var(--border) solid;
+   }
+   .postbit,
+   .postbitlegacy,
+   .eventbit {
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+      clear: both;
+      position: relative;
+      float: left;
+      color: #3e3e3e;
+      border: 1px solid #e9e9e9;
+      border-radius: 3px;
+   }
+   #forum_icon_legend h5 {
+      font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      border: 1px var(--border) solid;
+      background: var(--black-bg-color) none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 5px 10px;
+   }
+   .formcontrols fieldset.blockrow legend {
+      color: var(--color-font);
+      font-size: 12px;
+      font-weight: bold;
+   }
+   .formcontrols .blockrow {
+      background: none;
+      border-top: solid 1px #cedfeb;
+      padding: 10px 5px;
+   }
+   .forumbit_nopost .forumhead .forumtitle a {
+      margin-left: 10px;
+   }
+   body a {
+      text-decoration: none;
+      color: var(--color-font);
+   }
+   body a:hover {
+      color: var(--color-font);
+   }
+   .forumbit_nopost .forumbit_nopost .forumrow,
+   .forumbit_post .forumrow {
+      display: block;
+      width: 100%;
+      float: left;
+      min-height: 58px;
+      position: relative;
+      border-bottom: 1px solid #c4c4c4;
+      border-left: 1px solid #c4c4c4;
+      border-right: 1px solid #c4c4c4;
+      background-color: var(--black-bg-color);
+   }
+   .notices li {
+      background: var(--black-bg-color) none;
+      font-size: 13px;
+      color: var(--color-font);
+      padding: 5px 10px;
+      margin-bottom: 5px;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-align: left;
+      clear: both;
+      border: 4mm ridge rgb(255, 255, 255);
+      transition: 0.5s ease;
+      opacity: 1;
+   }
+   .notices li:hover {
+      border: 4mm ridge rgb(41, 41, 41);
+      transition: 0.5s ease;
+      opacity: 1;
+   }
+   .navbar {
+      position: relative;
+      height: 53px;
+      background: var(--main-bg-color) none;
+      margin: 10px 0px 0px 0px;
+      color: var(--color-font);
+      font: 12px sans-serif;
+      border: 0px solid;
+   }
+   .navtabs {
+      background: var(--main-bg-color);
+      padding: 0px 0px 0px 20px;
+      height: 26px;
+      border: none;
+   }
+   .navtabs li a.navtab {
+      border-top: 1px solid;
+      border-left: 1px solid;
+      display: block;
+      background: none;
+      min-width: 60px;
+      width: auto !important;
+      text-align: center;
+      color: var(--color-font);
+      font: bold 12px Arial, Calibri, Verdana, Geneva, sans-serif;
+      text-decoration: none;
+      line-height: 26px;
+      padding: 0 10px;
+      transition: margin-left 4s, color 0s;
+   }
+   .navtabs li {
+      float: left;
+      border-right: 0.1px solid #fff;
+   }
+   .navtabs li:first-child {
+      border-left: 0.1px solid #fff;
+   }
+   .globalsearch .buttoncontainer {
+      height: 26px;
+      border-left: 1px solid #fff;
+      display: inline-block;
+      border-right: 1px solid #fff;
+      width: 25px;
+      overflow: hidden;
+   }
+   .navtabs ul {
+      height: 26px;
+      position: absolute;
+      top: 26px;
+      left: 0px;
+      width: 100%;
+      border-top: 1px solid #fff;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin-right: -80px;
+      direction: ltr;
+   }
+   .navtabs li.selected a.navtab {
+      color: #000000;
+      box-shadow: inset 15px -25px 15px -25px;
+      background-color: white;
+      position: relative;
+      top: -4px;
+      padding-top: 4px;
+      z-index: 10;
+   }
+   .forumbit_nopost .forumbit_nopost .forumrow,
+   .forumbit_post .forumrow {
+      color: var(--color-font);
+      display: block;
+      width: 100%;
+      float: left;
+      min-height: 58px;
+      position: relative;
+      border-bottom: 1px solid #c4c4c4;
+      border-left: 1px solid #c4c4c4;
+      border-right: 1px solid #c4c4c4;
+   }
+   .forumhead + .childforum .L2:first-child .forumrow,
+   .forumhead + .L2 .forumrow {
+      background: none;
+      border-top: 0;
+      background-color: var(--black-bg-color);
+   }
+   .toplinks {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      color: #ffffff;
+      font: normal normal normal 11px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      text-align: right;
+      background: none;
+   }
+   .toplinks ul.isuser li.welcomelink {
+      display: block;
+      clear: left;
+      padding-top: 2px;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 50px;
+      color: #FFFFFF;
+   }
+   .toplinks ul.isuser li.welcomelink a {
+      display: inline;
+      float: none;
+      clear: none;
+      margin-left: 0;
+   }
+   .toplinks ul.isuser li.welcomelink a:hover {
+      display: inline;
+      background-color: var(--main-bg-color);
+      float: none;
+      clear: none;
+      margin-left: 0;
+   }
+   .toplinks .notifications a.popupctrl:hover,
+   .toplinks .nonotifications a.popupctrl:hover,
+   .toplinks .nonotifications a.popupctrl.active,
+   .toplinks .notifications a.popupctrl.active {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 4px;
+      padding-right: 15px;
+      background: var(--black-bg-color) url(images/misc/arrow.png) no-repeat right center;
+   }
+   .toplinks .notifications a.popupctrl.active:active {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 4px;
+      padding-right: 15px;
+      background: var(--black-bg-color) none;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+   }
+   .toplinks ul.isuser li a:hover {
+      background-color: var(--black-bg-color);
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      display: block;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-weight: bold;
+      color: #ffffff;
+   }
+   .navlinks {
+      background: none;
+      border-top: 1px solid #e7e7e7;
+      padding: 10px 0;
+      text-align: center;
+      color: #5d5d5d;
+      font-size: 13px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      clear: both;
+   }
+   .wgo_block .blockbody {
+      border: 1px solid #c4c4c4;
+      background: url(images/gradients/gradient-greytowhite.png) repeat-x;
+      _background-image: none;
+   }
+   .wgo_block .blockhead {
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background: var(--main-bg-color) url(images/buttons/newbtn_middle.png);
+      _background-image: none;
+      border: 1px solid #606060;
+   }
+   .wgo_block .blocksubhead {
+      padding-left: 10px;
+      font: 12px;
+      color: #3e3e3e;
+      background: none;
+      background-color: var(--color-font);
+      border: 2px whitesmoke solid;
+      padding-bottom: 2px;
+   }
+   .footer {
+      clear: both;
+      margin-top: 15px;
+      text-align: right;
+      display: block;
+      -moz-box-shadow: -2px 2px 2px #c8c8c8;
+      -webkit-box-shadow: -2px 2px 2px #c8c8c8;
+      box-shadow: -2px 2px 2px #c8c8c8;
+      background: var(--main-bg-color) none;
+      padding: 5px 0px 5px 0px;
+      border: 1px solid #fff;
+      font: normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+   }
+   .popupbody li a:hover,
+   .popupbody li > label:hover,
+   .toplinks .nonotifications .popupbody a:hover,
+   #usercp_nav .blockrow * a:hover {
+      background-color: var(--color-font);
+      color: black;
+   }
+   #usercp_nav li a.usercp_folder-left,
+   #usercp_nav .blockrow * a {
+      background-color: var(--black-bg-color);
+      border: 1px white solid;
+      font-size: 12px;
+   }
+   #usercp_nav .blockbody {
+      background: none, none;
+      border: none;
+   }
+   .blockfoot,
+   .blocksubfoot {
+      padding-top: 10px;
+      border: none;
+      background: none;
+   }
+   /*Черный с границей*/
+   .postbit .postfoot .textcontrols,
+   .postbitlegacy .postfoot .textcontrols,
+   .eventbit .eventfoot .eventcontrols {
+      background-color: #ffffff;
+      border-top: 2px var(--border) solid;
+      border-left: 0px var(--border) solid;
+      border-right: 1px var(--border) solid;
+      border-bottom: 0px var(--border) solid;
+   }
+   /*Черный без границы (закругление границы)*/
+   .postbitlegacy .postdetails {
+      background-color: var(--main-bg-color);
+      border-radius: 2px;
+   }
+   /*Серый с границей*/
+   .sortrow,
+   .pmlist .blockrow,
+   #sidebar_container .userprof_content .blockrow,
+   .userprof_headers,
+   .forum_info .blockbody {
+      background: var(--black-bg-color) none;
+      border-bottom: 2px var(--border) solid;
+      border-left: 4px var(--border) solid;
+      margin: 2px 2px 2px 2px;
+      transition: 0.2s ease;
+   }
+   /*Расширенный поиск*/
+   #searchtypeswitcher {
+      border-bottom: 4px solid var(--border);
+   }
+   #searchtypeswitcher li.selected a {
+      background-color: var(--border);
+      color: black;
+   }
+   #searchtypeswitcher li a {
+      display: block;
+      padding: 5px 10px;
+      margin-right: 5px;
+      background-color: var(--main-bg-color);
+      float: left;
+      clear: right;
+      color: #ffffff;
+      text-decoration: none;
+      -moz-border-radius-topright: 5px;
+      -moz-border-radius-topleft: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top: 2px var(--border) solid;
+      border-left: 1px var(--border) solid;
+   }
+   #searchtypeswitcher li a:hover {
+      display: block;
+      padding: 5px 10px;
+      margin-right: 5px;
+      background-color: var(--main-bg-color);
+      float: left;
+      clear: right;
+      color: #ffffff;
+      background: var(--border);
+      text-decoration: none;
+      -moz-border-radius-topright: 5px;
+      -moz-border-radius-topleft: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top: 2px var(--border) solid;
+      border-left: 1px var(--border) solid;
+   }
+   .blocksubhead {
+      font-size: 14px;
+      text-align: center;
+      background: none;
+      border-top: 2px white solid;
+      border-bottom: 2px white solid;
+      margin: 3px 3px 3px 3px;
+      vertical-align: middle;
+   }
+   .blockbody.settings_form_border {
+      border-right: 0px solid #6B91AB;
+      border-left: 0px solid #6B91AB;
+      border-bottom: 0px solid #6B91AB;
+   }
+   #usercp_nav .blocksubhead {
+      color: #3e3e3e;
+      background: none;
+      padding: 4px 10px 4px 10px;
+      border-top: none;
+   }
+   #pmfolderlist .blockrow.imod_highlight {
+      background: var(--border);
+      color: black;
+      border-bottom: 2px black solid;
+      border-left: 4px black solid;
+      transition: 0.2s ease;
+   }
+   /*Серый без границы*/
+   .blockrow,
+   .summaryinfo.pos,
+   .formcontrols > *:first-child,
+   .formcontrols .blocksubhead + .blockrow,
+   .formcontrols .section .blockrow:first-child,
+   .formcontrols .section,
+   .formcontrols,
+   .member_content #sidebar_container div.block,
+   #sidebar_container.member_summary {
+      background-color: var(--black-bg-color);
+      border-radius: 2px;
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+      border: none;
+      border-top: none;
+      color: var(--color-font);
+   }
+   /*Кнопка Изменить стиль профиля*/
+   .userprof_button {
+      color: #eae6e6;
+      background-color: var(--black-bg-color);
+      background-image: url(images\2f gradients\2f generic_button\2e png);
+      background-repeat: repeat-x;
+      border-color: #a8a8a8;
+      border-radius: 3px;
+      transition: 0.2s ease;
+   }
+   /*Кнопка Изменить стиль профиля hover*/
+   .userprof_button:hover {
+      color: white;
+      background-color: var(--main-bg-color);
+      background-image: url(images\2f gradients\2f generic_button\2e png);
+      background-repeat: repeat-x;
+      border-color: #a8a8a8;
+      border-radius: 8px;
+      transition: 0.2s ease;
+   }
+   /*Кнопки*/
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok,
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel,
+   .textcontrols a,
+   a.textcontrol,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
+   .navpopupmenu.popupmenu.nohovermenu a.textcontrol,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
+   .above_threadlist .newcontent_textcontrol,
+   .below_threadlist .newcontent_textcontrol,
+   .above_postlist .newcontent_textcontrol,
+   .noinlinemod.below_postlist .newcontent_textcontrol,
+   .actionbuttons .group .button,
+   .newcontent_textcontrol {
+      position: relative;
+      padding: 3px 5px;
+      font: bold 12px sans-serif;
+      line-height: 1.230;
+      text-decoration: none;
+      border: 1px var(--border) solid;
+      color: var(--color-font);
+      background: var(--main-bg-color) none;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      transition: 0.2s ease;
+   }
+   /*Кнопки hover*/
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok,
+   .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel,
+   .textcontrols a,
+   a.textcontrol:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.textcontrol:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .above_threadlist .newcontent_textcontrol:hover,
+   .below_threadlist .newcontent_textcontrol:hover,
+   .above_postlist .newcontent_textcontrol:hover,
+   .noinlinemod.below_postlist .newcontent_textcontrol:hover,
+   .actionbuttons .group .button:hover,
+   .newcontent_textcontrol:hover {
+      position: relative;
+      padding: 3px 5px;
+      font: bold 12px sans-serif;
+      line-height: 1.230;
+      text-decoration: none;
+      border: 1px white solid;
+      color: white;
+      background: none;
+      background-color: var(--black-bg-color);
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+   }
+   /*Кнопка "Вверх"*/
+   .postbitlegacy .postfoot .textcontrols a,
+   .postbit .postfoot .textcontrols a,
+   .eventbit .eventfoot .eventcontrols a,
+   .postbitlegacy .postfoot .textcontrols span.mobile,
+   .postbit .postfoot .textcontrols span.mobile {
+      padding: 3px;
+      padding-left: 23px;
+      border: 0px solid #a8a8a8;
+      color: var(--black-bg-color);
+      background-color: white;
+      font: bold 12px sans-serif;
+      display: inline-block;
+      transition: 0.2s ease;
+   }
+   /*Кнопка "Вверх" hover*/
+   .postbitlegacy .postfoot .textcontrols a:hover,
+   .postbit .postfoot .textcontrols a:hover,
+   .eventbit .eventfoot .eventcontrols a:hover,
+   .postbitlegacy .postfoot .textcontrols span.mobile:hover,
+   .postbit .postfoot .textcontrols span.mobile:hover {
+      background-color: white;
+      color: var(--main-bg-color);
+   }
+   /*Кнопка Пожаловаться*/
+   .postbitlegacy .postfoot .textcontrols a.infraction,
+   .postbit .postfoot .textcontrols a.infraction {
+      background-color: white;
+      color: white;
+   }
+   /*Кнопки переключения страниц*/
+   .pagination span a.popupctrl,
+   .pagination span a,
+   .pagination span a:link {
+      background: var(--main-bg-color) none;
+      font: normal 13px sans-serif;
+      padding-right: 4px;
+      padding-left: 9px;
+      border: 1px var(--border) solid;
+      color: var(--color-font);
+   }
+   /*Кнопки переключения страниц hover*/
+   .pagination span a.popupctrl:hover,
+   .pagination span a:hover,
+   .pagination span a:link:hover {
+      background: var(--black-bg-color) none;
+      font: normal 13px sans-serif;
+      padding-right: 4px;
+      padding-left: 9px;
+      border: 1px var(--border) solid;
+      color: white;
+   }
+   .threadbit .nonsticky,
+   .threadbit .discussionrow,
+   .threadbit .sticky,
+   .threadbit .alt {
+      background: var( --black-bg-color) none;
+      border-bottom: 1px var(--border) solid;
+      margin: 0;
+      padding: 1px;
+   }
+   .threadbit .alt {
+      background: var( --black-bg-color) none;
+      border-bottom: 0px var(--border) solid;
+      margin: 0;
+      padding: 1px;
+   }
+   .navtabs .popupbody {
+      border: none;
+      background: none;
+      border-top: none;
+   }
+   .navtabs .popupbody li {
+      border-top: 1px black solid;
+   }
+   /*Сообщения в постах*/
+   .postbitlegacy .userinfo {
+      float: left;
+      position: relative;
+      width: 180px;
+      padding: 2px 10px 5px;
+      font-size: 11px;
+      display: block;
+      background: none;
+      clear: both;
+   }
+   /*Цитаты quote*/
+   .bbcode_quote div.quote_container,
+   .bbcode_container div.bbcode_quote {
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 15px;
+      padding: 5px 10px 5px 10px;
+      background-color: var(--quote);
+      border-color: var(--border-quote);
+      background: linear-gradient(to left, #a4a0a0, var(--quote));
+      vertical-align: middle;
+   }
+   /*Кнопка возле цитат*/
+   .bbcode_container .bbcode_quote_container {
+      background: none;
+   }
+   /*Цвет теста в цитатах*/
+   .bbcode_container div.bbcode_quote div.message {
+      font-family: system-ui;
+      color: #fff;
+   }
+   .above_postlist .pagination_top .pagination,
+   .above_postlist .pagination_top .postpagestats {
+      color: var(--color-font);
+   }
+   .postbitlegacy .postbody,
+   .eventbit .eventdetails .eventbody {
+      margin-left: 200px;
+      border-left: 1px solid var(--border);
+      background: none;
+      _background-image: none;
+      padding-bottom: 1em;
+   }
+   .blocksubhead a {
+      color: var(--color-font);
+      text-decoration: none;
+   }
+   .blocksubhead a:hover {
+      color: white;
+      text-decoration: none;
+   }
+   dl.stats dt {
+      color: var(--color-font);
+   }
+   .navtabs > ul.floatcontainer li a,
+   .navbar_advanced_search li a {
+      text-decoration: none;
+      font: 12px sans-serif;
+      line-height: 26px;
+   }
+   /*Сообщения в профиле (лента)*/
+   li.activitybit {
+      overflow: hidden;
+      color: #3E3E3E;
+      font-weight: normal;
+      font-family: inherit;
+      font-size: 11px;
+      margin: 0px 0px 10px 0px;
+      border: 0 none;
+      padding: 10px;
+      background: var(--black-bg-color) none;
+   }
+   /*Последний раз редактировалось + время*/
+   .lastedited,
+   .time,
+   .lastedited a,
+   .userprof_content .time,
+   #sidebar_container .userprof_content .time,
+   .userprof_content .time,
+   .below_body .time {
+      font-style: italic;
+      padding-top: 1em;
+      color: #a24545;
+      font-size: 11px;
+      clear: both;
+   }
+   /*Последний раз редактировалось hover*/
+   .lastedited a:hover {
+      font-style: italic;
+      padding-top: 1em;
+      color: #884040;
+      font-size: 11px;
+      clear: both;
+   }
+   /*Спойлер-шапка*/
+   .spoiler > h2 {
+      font: italic normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      font-size: 11px;
+      padding: 3px 17px 3px 17px;
+      margin: 0 0 0 3px;
+      line-height: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: none;
+   }
+   /*Спойлер внутри*/
+   .spoiler > div {
+      padding: 2px 6px;
+      overflow: hidden;
+      border-left: 0px solid;
+      background: var(--main-bg-color) none;
+   }
+   /*spoiler*/
+   .spoiler {
+      margin: 20px 30px 10px;
+      background: black none;
+      border-radius: 14px;
+      border: 1px var(--border) solid;
+   }
+   /*Кнопки Ответ, Ответ с цитированием*/
+   .postbitlegacy .postfoot .textcontrols a.quickreply,
+   .postbit .postfoot .textcontrols a.quickreply,
+   .postbitlegacy .postfoot .textcontrols a.forwardpost,
+   .postbit .postfoot .textcontrols a.forwardpost,
+   .postbitlegacy .postfoot .textcontrols a.newreply,
+   .postbit .postfoot .textcontrols a.newreply,
+   .postbitlegacy .postfoot .textcontrols a.editpost,
+   .postbit .postfoot .textcontrols a.editpost,
+   .eventbit .eventfoot .textcontrols a.editevent {
+      background: none;
+      padding: 0px 0px 0px 0px;
+      padding-left: 20px;
+      border: 0px solid #a8a8a8;
+   }
+   .forumrow + .childsubforum .forumrow,
+   .forumhead + .childforum .L2:first-child .L2 .forumrow,
+   .forumhead + .childforum .L2 .L2:first-child .forumrow {
+      background: var(--black-bg-color);
+   }
+   /*Мой профиль*/
+   #activity_tab_container > div {
+      overflow: hidden;
+      background-color: var(--black-bg-color);
+   }
+   .memberprofiletabunder {
+      background-color: #7192a8;
+      background: var(--border);
+      background-repeat: repeat-x;
+   }
+   .activitystream_block dd.selected,
+   dd.userprof_module {
+      color: #ffffff;
+      background-color: #292a2b;
+      border-color: #c8cacc;
+      background-image: url(images\2f buttons\2f newbtn_middle\2e png);
+      background-repeat: repeat-x;
+   }
+   .userprof {
+      font-family: system-ui;
+      font-size: 12px;
+   }
+   .userprof:hover {
+      font-family: system-ui;
+      font-size: 12px;
+   }
+   .activitystream_block dd,
+   dd.userprof_moduleinactive {
+      color: white;
+      background: var(--black-bg-color);
+      border-color: #fff;
+      background-image: url(images\2f gradients\2f top-highlight\2e png);
+      background-repeat: repeat-x;
+   }
+   dl.tabslight dd.userprof_moduleinactive a {
+      color: #ffffff;
+      background-color: transparent;
+      background-image: none;
+      border-color: #fff;
+   }
+   dl.as-tabs dd a {
+      color: #ffffff;
+   }
+   dl.as-tabs dd a {
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      padding: 0 10px;
+      height: 24px;
+      line-height: 24px;
+      display: block;
+   }
+   dl.tabslight dd a,
+   #sidebar_container.member_summary .blocksubhead.smaller,
+   #sidebar_container.member_summary .blockrow {
+      font-family: system-ui;
+      font-size: 12px;
+   }
+   dl.tabslight dd a {
+      font-size: 12px;
+      font-weight: bold;
+      color: #3e3e3e;
+      text-decoration: none;
+      text-align: center;
+      padding: 0 10px;
+      min-width: 55px;
+      height: 25px;
+      line-height: 25px;
+      display: block;
+      border: 1px solid #fdfdfd;
+      background-color: #e9e9e9;
+      margin-left: -1px;
+      margin-bottom: -1px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 11px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 11px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 11px;
+   }
+   dl.tabslight dd a:hover {
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--color-font);
+      text-decoration: none;
+      text-align: center;
+      padding: 0 10px;
+      min-width: 55px;
+      height: 25px;
+      line-height: 25px;
+      display: block;
+      border: 1px solid #fff;
+      background-color: #fff;
+      margin-left: -1px;
+      margin-bottom: -1px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 11px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 11px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 11px;
+   }
+   li.userprof_content {
+      margin-bottom: .5em;
+      color: #333333;
+      background-color: var(--black-bg-color);
+      background-image: none;
+      background-repeat: repeat;
+   }
+   /*Группы*/
+   img.sgicon {
+      width: 85px;
+      height: auto;
+      padding: 0px;
+      border: 0px solid #8b8c8d;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      overflow: hidden;
+      background: none;
+   }
+   #groupsearch {
+      float: right;
+      border: 1px solid #c1c1c1;
+      border-width: 2px;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 5px;
+      padding: 0 10px;
+      background: white;
+   }
+   #sidebar li.sgicon {
+      border-top: none;
+      background: var(--black-bg-color);
+   }
+   li.sgicon .maincol,
+   #content .blockrow > li,
+   #sidebar li.sgicon .maincol {
+      padding: 10px;
+      background: none;
+      background-color: var(--black-bg-color);
+      font-size: 11px;
+      overflow: hidden;
+      border: 0;
+   }
+   #sidebar_container .block {
+      margin-bottom: 4px;
+      padding: 6px;
+      border-top-left-radius: 5px;
+      background: var(--main-bg-color);
+   }
+   .forumbit_nopost .subforumdescription {
+      background: var(--main-bg-color) none;
+   }
+   #forumrules {
+      margin-bottom: 10px;
+      border-bottom: 0px solid #c4c4c4;
+      border-left: 0px solid #c4c4c4;
+      border-right: 0px solid #c4c4c4;
+      border-top: 0px solid rgb(255, 255, 255);
+      background: var(--black-bg-color) none;
+   }
+   .thread_info .blockbody {
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 0;
+      background: var(--black-bg-color) none;
+      box-shadow: none;
+   }
+   .lightbox > div > div {
+      background-color: var(--main-bg-color);
+      padding: 6px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      border-bottom-right-radius: 30px;
+   }
+   .lightbox > div {
+      background: none;
+      padding: 14px;
+      -moz-border-radius: 14px;
+      -webkit-border-radius: 14px;
+      border-radius: 14px;
+   }
+   .button {
+      padding: 10px 25px;
+      font: 15px system-ui;
+      border: 1px solid #a8a8a8;
+      color: #424242;
+      background: #fff url(images/gradients/generic_button.png) repeat-x top left;
+      border-top-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      transition: 0.5s ease;
+      cursor: pointer;
+   }
+   .button:hover {
+      padding: 10px 25px;
+      font: 15px system-ui;
+      border: 1px solid #a8a8a8;
+      color: #f1eded;
+      background: #272525 url(images/gradients/generic_button.png) repeat-x top left;
+      border-top-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      transition: 0.5s ease;
+      cursor: pointer;
+   }
+   .blockbody {
+      background: none;
+      padding-left: 0px;
+      padding-right: 0px;
+   }
+   #memberlist_table td.alt1 {
+      background: none;
+   }
+   .columnsort a:hover,
+   .columnsort span:hover {
+      display: block;
+      text-decoration: none;
+      white-space: nowrap;
+      text-align: left;
+      background: whitesmoke;
+      color: black;
+   }
+   #charnav dd a {
+      font-size: 11px;
+      padding: 2px 4px;
+      border: 1px solid #fff;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-left: 2px;
+   }
+   #charnav dd a:hover {
+      font-size: 11px;
+      padding: 2px 4px;
+      border: 1px solid #fff;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-left: 2px;
+      background: var(--black-bg-color);
+      color: whitesmoke;
+   }
+   #album_content .blockbody,
+   #albumlist .blockbody {
+      background: var(--main-bg-color);
+      border: 1px white solid;
+      border-top: 0px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+   }
+   .albumlist_entry,
+   #latestalbumcontainer li {
+      float: left;
+      margin-left: 25px;
+      margin-top: 20px;
+      padding: 0 15px 10px 15px;
+      text-align: left;
+      display: block;
+      width: 500px;
+      height: 564.04px;
+      overflow: hidden;
+      border: 0px solid #e9e9e9;
+      background: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+   }
+   #thumbnails li .picture,
+   #picturelink img {
+      display: block;
+      width: auto;
+      height: auto;
+      padding: 15px;
+   }
+   #thumbnails li,
+   #picturelink img {
+      float: left;
+      margin: 10px;
+      text-align: center;
+      background: rgb(246, 248, 249) none;
+      border: 1px solid #000;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 10px;
+   }
+}
