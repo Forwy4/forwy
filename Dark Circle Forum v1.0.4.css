@@ -61,7 +61,8 @@
    .signaturecontainer,
    div.body_wrapper,
    .userprof_content,
-   li.userprof_content {
+   li.userprof_content,
+   .above_threadlist .threadpagenav .threadpagestats {
       font-family: system-ui;
       color: var(--color-font) !important;
    }
@@ -71,7 +72,8 @@
    .userprof_title,
    #sidebar_container.member_summary h1,
    li.sgicon .maincol p.description,
-   #sidebar_container .blocksubhead span.blocktitle {
+   #sidebar_container .blocksubhead span.blocktitle,
+   .threadbit .alt {
       font-family: system-ui;
       color: white !important;
    }
@@ -80,7 +82,6 @@
    .footer_copyright,
    .footer_morecopyright,
    .footer_time,
-   .threadbit .alt,
    dd,
    .threadbit .threadmeta,
    .shade,
