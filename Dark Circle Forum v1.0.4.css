@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Circle Forum
 @namespace      https://github.com/Forwy4/forwy
-@version        1.0.3
+@version        1.0.4
 @description    Dark style for forum.wowcircle.com
 @author         Forwy
 ==/UserStyle== */
@@ -22,10 +22,12 @@
    #navbar_notice_7 > strong > b > p:nth-child(3) > a > span {
       /*Фикс Актуальные новости 1 ссылка*/
       color: var(--links-color) !important;
+      transition: 0.5s ease;
    }
    #navbar_notice_7 > strong > b > p:nth-child(3) > a > span:hover {
       /*Фикс Актуальные новости 1 ссылка hover*/
       color: var(--color-font) !important;
+      transition: 0.5s ease;
    }
    /*Одинковый цвет для всего текста*/
    .postbitlegacy .postrow,
