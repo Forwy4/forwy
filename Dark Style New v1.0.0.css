@@ -18,7 +18,7 @@
       /*Среднезаметный текст*/
       --font3: #e2dede;
       /*Сильнозаметны текст*/
-      --time-color: #001cff;
+      --time-color: #8d99ff;
    }
    #vbulletin_html {
       /*Основное изображение*/
@@ -362,8 +362,10 @@
       background-repeat: repeat;
       border-color: var(--border);
    }
-   .member_summary dl.stats dt {
-      width: 100%;
+   .member_summary dl.stats dt,
+   .member_summary dl.stats dd {
+      font-size: 12px;
+      margin: 3px;
    }
    /*Активность в профиле*/
    li.userprof_content {
