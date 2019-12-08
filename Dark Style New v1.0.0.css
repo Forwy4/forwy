@@ -27,6 +27,49 @@
       /*Основное изображение*/
       background: var(--main-color) url(https://i.imgur.com/zklXXhc.jpg) no-repeat;
    }
+   /*Замена значка сообщений*/
+   #forum_statusicon_109,
+   #forum_statusicon_113,
+   #forum_statusicon_116,
+   #forum_statusicon_118,
+   #forum_statusicon_121,
+   #forum_statusicon_123,
+   #forum_statusicon_125,
+   #forum_statusicon_739,
+   #forum_statusicon_297,
+   #forum_statusicon_1680,
+   #forum_statusicon_472,
+   #forum_statusicon_471,
+   #forum_statusicon_1457,
+   #forum_statusicon_11,
+   #forum_statusicon_15,
+   #forum_statusicon_1036,
+   #forum_statusicon_522,
+   #forum_statusicon_692,
+   #forum_statusicon_915,
+   #forum_statusicon_1458,
+   #forum_statusicon_781,
+   #forum_statusicon_573,
+   #forum_statusicon_17,
+   #forum_statusicon_1431,
+   #forum_statusicon_31,
+   #forum_statusicon_455,
+   #forum_statusicon_1043,
+   #forum_statusicon_1074,
+   #forum_statusicon_296,
+   #forum_statusicon_587,
+   #forum_statusicon_108,
+   #forum_statusicon_594,
+   #forum_statusicon_103,
+   #forum_statusicon_284,
+   #forum_statusicon_331,
+   #forum_statusicon_110,
+   #forum_statusicon_595,
+   #forum_statusicon_393,
+   #forum_statusicon_729,
+   #forum_statusicon_186 {
+      content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
+   }
    body {
       /*Основной шрифт*/
       font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
