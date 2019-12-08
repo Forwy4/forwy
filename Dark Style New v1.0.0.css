@@ -288,19 +288,11 @@
    }
    /*Верхушка Форум Альбомы Группы... Выбрано*/
    .navtabs li.selected a.navtab {
-      color: #3b2415;
       background: var(--main-color) none repeat-x;
       position: relative;
-      top: -0px;
-      padding-top: 0px;
-      z-index: 10;
    }
    /*Верхушка Форум Альбомы Группы... Не выбрано*/
    .navtabs li a.navtab {
-      -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       line-height: 28px;
@@ -308,10 +300,6 @@
       background: var(--main-bg-color);
    }
    .navtabs li a.navtab:hover {
-      -webkit-border-top-left-radius: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -moz-border-radius-topleft: 5px;
-      -moz-border-radius-topright: 5px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       line-height: 28px;
@@ -343,11 +331,7 @@
       width: 250px;
       float: left;
       clear: right;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
       border-radius: 5px;
-      -moz-box-shadow: -2px 2px 2px #c8c8c8;
-      -webkit-box-shadow: -2px 2px 2px #c8c8c8;
       box-shadow: -2px 2px 2px #c8c8c8;
       background: none;
       border: 0px var(--border) solid;
