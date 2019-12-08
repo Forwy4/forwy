@@ -18,7 +18,7 @@
       /*Среднезаметный текст*/
       --font3: #e2dede;
       /*Сильнозаметны текст*/
-      --time-color: #c83d3d;
+      --time-color: #ad5353e0;
    }
    #vbulletin_html {
       /*Основное изображение*/
@@ -431,7 +431,6 @@
    }
    /*Кнопка Изменить стиль профиля*/
    .userprof_button {
-      width: 200px;
       padding: 5px;
       margin: 0;
       border: 0px var(--border) solid;
@@ -440,7 +439,6 @@
       transition: 0.2s ease;
    }
    .userprof_button:hover {
-      width: 200px;
       padding: 5px;
       margin: 0;
       border: 0px var(--border) solid;
