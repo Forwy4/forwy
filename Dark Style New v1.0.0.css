@@ -20,9 +20,6 @@
       /*Сильнозаметны текст*/
       --time-color: #c83d3d;
    }
-   #forum118 > div > div.forumlastpost.td > div > p.lastposttitle > span > b {
-      color: #669a9a;
-   }
    #vbulletin_html {
       /*Основное изображение*/
       background: var(--main-color) url(https://i.imgur.com/zklXXhc.jpg) no-repeat;
@@ -70,7 +67,20 @@
    #forum_statusicon_186 {
       content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
    }
-   body {
+   /*Замена значка бесконечности(ссылка)*/
+   #forum_statusicon_378,
+   #forum_statusicon_1706,
+   #forum_statusicon_1430,
+   #forum_statusicon_1052,
+   #forum_statusicon_1636,
+   #forum_statusicon_1508,
+   #forum_statusicon_1072,
+   #forum_statusicon_1070,
+   #forum_statusicon_1073 {
+      content: url(https://cdn.discordapp.com/attachments/575078879572656128/653233016654528523/subforum_link-48.png);
+   }
+   body,
+   .userprof {
       /*Основной шрифт*/
       font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
       color: var(--color-font);
@@ -86,7 +96,9 @@
    }
    .time,
    .wgo_block .time,
-   .below_body .time {
+   .below_body .time,
+   #sidebar_container .userprof_content .time,
+   .userprof_content .time {
       /*Время*/
       color: var(--time-color);
    }
@@ -94,22 +106,27 @@
    .forumbit_post .forumstats li,
    .forumbit_post .forumstats_2 li {
       /*Малозаметный*/
-      color: var(--font1);
+      color: var(--font1) !important;
    }
-   .wgo_block .blocksubhead {
+   .wgo_block .blocksubhead,
+   #sidebar_container .blocksubhead,
+   li.activitybit, dl.stats dd {
       /*Сильнозаметный*/
-      color: var(--font3);
+      color: var(--font3) !important;
    }
    .wgo_block .section,
-   .shade {
+   .shade,
+   dl.stats dt,
+   #sidebar_container .userprof_content .blockrow, .moreactivity span, .moreactivity a {
       /*Среднезаметный*/
-      color: var(--font2);
+      color: var(--font2) !important;
    }
    #footer_copyright > a.banner-corner > img {
       /*Убираем баннер каты х5*/
       display: none;
    }
-   body > div.body_wrapper {
+   body > div.body_wrapper,
+   #yuievtautoid-0 > div.body_wrapper {
       /*Цвет на задней картинке*/
       background: linear-gradient(to top, var(--body-color) 0%, transparent 100%);
    }
@@ -212,10 +229,8 @@
       text-decoration: underline;
       padding: 0 5px;
    }
-   .forumbit_nopost .subforumdescription {
+   .forumbit_nopost .subforumdescription, .userprof_headers {
       /*Цвет под шапкой*/
-      padding: 5px 10px;
-      font-weight: normal;
       color: #fff4ed;
       background: var(--main-bg-color) none repeat-x;
    }
@@ -295,20 +310,10 @@
       background: var(--main-color);
    }
    .forumhead,
-   .wgo_block .blockhead {
+   .wgo_block .blockhead,
+   #sidebar_container .blocksubhead {
       /*Шапка заголовков разделов*/
       background: var(--main-color) none;
-      color: #ffffff;
-      clear: both;
-      float: left;
-      border: 0 none;
-      width: 100%;
-      -moz-border-radius-topright: 5px;
-      -moz-border-radius-topleft: 5px;
-      -webkit-border-top-right-radius: 5px;
-      -webkit-border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
    }
    #cat13 > div > div > p {
       background: var(--main-bg-color);
@@ -323,5 +328,124 @@
    .forumbit_post {
       background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
       border-bottom: 1px solid;
+   }
+   #sidebar_container.member_summary {
+      /*Там, где аватарка*/
+      width: 250px;
+      float: left;
+      clear: right;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: -2px 2px 2px #c8c8c8;
+      -webkit-box-shadow: -2px 2px 2px #c8c8c8;
+      box-shadow: -2px 2px 2px #c8c8c8;
+      background: none;
+      border: 0px var(--border) solid;
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 0;
+   }
+   /*Тоже там, где аватарка, только ниже*/
+   #sidebar_container .userprof_content .blockrow,
+   dl.stats dt {
+      background: var(--main-bg-color);
+      background-image: none;
+      background-repeat: repeat;
+      border-color: var(--border);
+   }
+   /*Активность в профиле*/
+   li.userprof_content {
+      margin-bottom: .5em;
+      color: #333333;
+      background-color: none;
+      background-image: none;
+      background-repeat: repeat;
+   }
+   li.activitybit {
+      overflow: hidden;
+      color: #3E3E3E;
+      font-weight: normal;
+      font-family: inherit;
+      font-size: 13px;
+      margin: 0px 0px 10px 0px;
+      border: 0 none;
+      padding: 10px;
+      background: var(--main-bg-color) none;
+   }
+   /*Шапка в личном кабинете*/
+   dd.userprof_moduleinactive {
+      background: var(--main-bg-color);
+      margin: 0;
+      padding: 0 15px;
+      transition: 0.2s ease;
+   }
+   dd.userprof_moduleinactive:hover {
+      background: var(--main-color);
+      margin: 0;
+      padding: 0 15px;
+      transition: 0.2s ease;
+   }
+   dl.tabslight dd.userprof_module a {
+      color: #ffffff;
+      background: none;
+      border: none;
+   }
+   dd.userprof_module {
+      background: var(--main-color);
+      font-weight: bold;
+      display: inline;
+      padding: 0 15px;
+      line-height: 22px;
+      font-size: 14px;
+   }
+   .memberprofiletabunder {
+      background-color: var(--border);
+      background-image: none;
+      background-repeat: repeat-x;
+   }
+   .as-tabs dd {
+      background: var(--main-bg-color);
+      border: 0;
+      padding: 0 5px;
+      transition: 0.2s ease;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+   }
+   .as-tabs dd:hover {
+      background: var(--main-color);
+      border: 0;
+      padding: 0 5px;
+      transition: 0.2s ease;
+   }
+   .activitystream_block dd.selected {
+      background: var(--main-bg-color);
+      border: none;
+   }
+   #activity_tab_container > div {
+      overflow: hidden;
+      background: transparent;
+   }
+   .activitystream_block dd.selected {
+      background: var(--main-color);
+   }
+   /*Кнопка Изменить стиль профиля*/
+   .userprof_button {
+      width: 200px;
+      padding: 5px;
+      margin: 0;
+      border: 0px var(--border) solid;
+      background: var(--main-color);
+      color: var(--color-font);
+      transition: 0.2s ease;
+   }
+   .userprof_button:hover {
+      width: 200px;
+      padding: 5px;
+      margin: 0;
+      border: 0px var(--border) solid;
+      background: var(--main-bg-color);
+      color: var(--color-font);
+      transition: 0.2s ease;
    }
 }
