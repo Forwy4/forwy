@@ -99,7 +99,8 @@
    .wgo_block .time,
    .below_body .time,
    #sidebar_container .userprof_content .time,
-   .userprof_content .time {
+   .userprof_content .time,
+   .postbitlegacy .posthead .time {
       /*Время*/
       color: var(--time-color);
    }
