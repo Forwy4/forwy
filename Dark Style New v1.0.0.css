@@ -1,0 +1,284 @@
+/* ==UserStyle==
+@name Dark Circle Forum (WoW Circle Style)
+@namespace https://github.com/Forwy4/forwy
+@version 1.0.0
+@description Dark style for forum.wowcircle.net
+@author Forwy
+==/UserStyle== */
+@-moz-document domain("forum.wowcircle.net") {
+   :root {
+      --main-color: #000201;
+      --main-bg-color: #646262;
+      --body-color: #eae9e7;
+      --border: #ece0eb;
+      --color-font: #e6e4e4;
+      --font1: #7e7b7b;
+      /*Малозаметный текст*/
+      --font2: #bbb6b6;
+      /*Среднезаметный текст*/
+      --font3: #e2dede;
+      /*Сильнозаметны текст*/
+      --time-color: #c83d3d;
+   }
+   #forum118 > div > div.forumlastpost.td > div > p.lastposttitle > span > b {
+      color: #669a9a;
+   }
+   #vbulletin_html {
+      /*Основное изображение*/
+      background: var(--main-color) url(https://i.imgur.com/zklXXhc.jpg) no-repeat;
+   }
+   body {
+      /*Основной шрифт*/
+      font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      color: var(--color-font);
+   }
+   body a {
+      font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      color: var(--color-font) !important;
+      transition: 0.5s ease;
+   }
+   a:hover {
+      color: white !important;
+      transition: 0.5s ease;
+   }
+   .time,
+   .wgo_block .time,
+   .below_body .time {
+      /*Время*/
+      color: var(--time-color);
+   }
+   .forumbit_post .forumrow,
+   .forumbit_post .forumstats li,
+   .forumbit_post .forumstats_2 li {
+      /*Малозаметный*/
+      color: var(--font1);
+   }
+   .wgo_block .blocksubhead {
+      /*Сильнозаметный*/
+      color: var(--font3);
+   }
+   .wgo_block .section,
+   .shade {
+      /*Среднезаметный*/
+      color: var(--font2);
+   }
+   #footer_copyright > a.banner-corner > img {
+      /*Убираем баннер каты х5*/
+      display: none;
+   }
+   body > div.body_wrapper {
+      /*Цвет на задней картинке*/
+      background: linear-gradient(to top, var(--body-color) 0%, transparent 100%);
+   }
+   .wgo_block .blockbody {
+      background: #646262;
+   }
+   .footer {
+      clear: both;
+      margin-top: 15px;
+      text-align: right;
+      display: block;
+      -moz-box-shadow: -2px 2px 2px #c8c8c8;
+      -webkit-box-shadow: -2px 2px 2px #c8c8c8;
+      box-shadow: -2px 2px 2px #c8c8c8;
+      background: #000201 none;
+      padding: 5px 0px 5px 0px;
+      border: 1px solid #695142;
+      color: #827972;
+      font: normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+   }
+   .toplinks {
+      /*Строка навигации*/
+      position: absolute;
+      right: 0px;
+      top: 0;
+      color: #ffffff;
+      font: normal normal normal 12px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      text-align: right;
+   }
+   #toplinks > ul > li.welcomelink > a {
+      background: none;
+   }
+   .toplinks .notifications a.popupctrl:hover,
+   .toplinks .nonotifications a.popupctrl:hover,
+   .toplinks .nonotifications a.popupctrl.active,
+   .toplinks .notifications a.popupctrl.active {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 4px;
+      padding-right: 15px;
+      background: var(--main-bg-color) url(images/wow-circle/misc/arrow.png) no-repeat right center;
+   }
+   .toplinks ul.isuser li a:hover {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
+      background: var(--main-bg-color);
+      color: rgb(255, 255, 255);
+   }
+   .popupbody {
+      font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+      color: #fff;
+      padding: 2px;
+      background: var(--main-bg-color) none;
+      border: 0px solid var(--border);
+      position: absolute;
+      z-index: 1000;
+      top: 1.5em;
+      left: 0;
+      display: none;
+      min-width: 200px;
+   }
+   .popupbody li a,
+   .popupbody li label {
+      display: block;
+      background: none;
+      text-decoration: none;
+      text-align: left;
+      white-space: nowrap;
+   }
+   .toplinks .nonotifications .popupbody a {
+      color: #000000;
+      background: var(--main-bg-color) none;
+      float: none;
+      clear: none;
+      padding: 0 5px;
+      margin-left: 0;
+      text-align: left;
+      line-height: 26px;
+   }
+   .popupbody li > a:hover,
+   .popupbody li > label:hover {
+      color: #fff;
+      background: var(--main-color) none;
+   }
+   .popupbody li > a,
+   .popupbody li > label {
+      color: #fff;
+      background: var(--main-bg-color) none;
+   }
+   #yui-gen3 > li:nth-child(5) > a,
+   #yui-gen6 > li:nth-child(3) > a,
+   #yui-gen9 > li:nth-child(5) > a {
+      border-bottom-left-radius: 7px;
+   }
+   .toplinks .nonotifications .popupbody a:hover {
+      color: #fff;
+      background: var(--main-color) none;
+      text-decoration: underline;
+      padding: 0 5px;
+   }
+   .forumbit_nopost .subforumdescription {
+      /*Цвет под шапкой*/
+      padding: 5px 10px;
+      font-weight: normal;
+      color: #fff4ed;
+      background: var(--main-bg-color) none repeat-x;
+   }
+   .navlinks {
+      background: var(--main-bg-color);
+      border-top: 1px solid var(--border);
+      padding: 10px 0;
+      text-align: center;
+      color: #5d5d5d;
+      font-size: 14px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      clear: both;
+   }
+   .threadbit .threadstats li,
+   .forumbit_post .forumstats li,
+   .forumbit_post .forumstats_2 li {
+      /*Просмотры тем*/
+      background: #30302f;
+      width: 70px;
+   }
+   .forumbit_post .forumstats li:first-child,
+   #forum186 > div.forumbit_post.L2 > div > ul.forumstats_2.td > li:nth-child(1) {
+      background: #414140;
+   }
+   #navbar_notice_7 {
+      /*Актуальные"Новости"*/
+      background: var(--main-bg-color);
+      border: var(--border) 1px solid;
+   }
+   #navbar_notice_7 > strong > b > p:nth-child(3) > a:nth-child(1) > span,
+   #navbar_notice_7 > strong > b > span {
+      /*Лечим ссылки Актуальные новости"*/
+      color: var(--color-font) !important;
+      transition: 0.5s ease;
+   }
+   #navbar_notice_7 > strong > b > p:nth-child(3) > a:nth-child(1) > span:hover {
+      color: white !important;
+      transition: 0.5s ease;
+   }
+   /*Верхушка Новые сообщения Личные сообщение Справка...*/
+   .navtabs ul {
+      background: var(--main-color);
+      border-bottom-left-radius: 10px;
+   }
+   /*Верхушка Форум Альбомы Группы... Выбрано*/
+   .navtabs li.selected a.navtab {
+      color: #3b2415;
+      background: var(--main-color) none repeat-x;
+      position: relative;
+      top: -0px;
+      padding-top: 0px;
+      z-index: 10;
+   }
+   /*Верхушка Форум Альбомы Группы... Не выбрано*/
+   .navtabs li a.navtab {
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      line-height: 28px;
+      min-width: 50px;
+      background: var(--main-bg-color);
+   }
+   .navtabs li a.navtab:hover {
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      line-height: 28px;
+      min-width: 50px;
+      background: var(--main-color);
+   }
+   .forumhead,
+   .wgo_block .blockhead {
+      /*Шапка заголовков разделов*/
+      background: var(--main-color) none;
+      color: #ffffff;
+      clear: both;
+      float: left;
+      border: 0 none;
+      width: 100%;
+      -moz-border-radius-topright: 5px;
+      -moz-border-radius-topleft: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+   }
+   #cat13 > div > div > p {
+      background: var(--main-bg-color);
+   }
+   .forumhead + .childforum .L2:first-child .forumrow,
+   .forumbit_post:nth-child(odd) .forumrow,
+   .forumbit_post .forumrow,
+   .forumbit_post:nth-child(even) .forumrow {
+      background: none !important;
+      border: none;
+   }
+   .forumbit_post {
+      background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+      border-bottom: 1px solid;
+   }
+}
