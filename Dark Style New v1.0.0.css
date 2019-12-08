@@ -18,7 +18,7 @@
       /*Среднезаметный текст*/
       --font3: #e2dede;
       /*Сильнозаметны текст*/
-      --time-color: #ad5353e0;
+      --time-color: #001cff;
    }
    #vbulletin_html {
       /*Основное изображение*/
@@ -80,7 +80,8 @@
       content: url(https://cdn.discordapp.com/attachments/575078879572656128/653233016654528523/subforum_link-48.png);
    }
    body,
-   .userprof {
+   .userprof,
+   .userprof_content {
       /*Основной шрифт*/
       font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
       color: var(--color-font);
@@ -110,14 +111,18 @@
    }
    .wgo_block .blocksubhead,
    #sidebar_container .blocksubhead,
-   li.activitybit, dl.stats dd {
+   li.activitybit,
+   dl.stats dd,
+   .userprof_title,
+   .shade {
       /*Сильнозаметный*/
       color: var(--font3) !important;
    }
    .wgo_block .section,
-   .shade,
    dl.stats dt,
-   #sidebar_container .userprof_content .blockrow, .moreactivity span, .moreactivity a {
+   #sidebar_container .userprof_content .blockrow,
+   .moreactivity span,
+   .moreactivity a {
       /*Среднезаметный*/
       color: var(--font2) !important;
    }
@@ -229,7 +234,8 @@
       text-decoration: underline;
       padding: 0 5px;
    }
-   .forumbit_nopost .subforumdescription, .userprof_headers {
+   .forumbit_nopost .subforumdescription,
+   .userprof_headers {
       /*Цвет под шапкой*/
       color: #fff4ed;
       background: var(--main-bg-color) none repeat-x;
@@ -362,16 +368,40 @@
       background-image: none;
       background-repeat: repeat;
    }
-   li.activitybit {
+   li.activitybit,
+   li.userprof_content,
+   .userprof_moduleinactive,
+   .formcontrols .blockrow,
+   .blockbody {
       overflow: hidden;
-      color: #3E3E3E;
       font-weight: normal;
       font-family: inherit;
       font-size: 13px;
       margin: 0px 0px 10px 0px;
-      border: 0 none;
+      border: none;
       padding: 10px;
       background: var(--main-bg-color) none;
+   }
+   .profile_editor_border,
+   .profile_content .actionbuttons {
+      border: none;
+   }
+   .blockfoot {
+      background: none;
+   }
+   .pagination span a,
+   .pagination span a.popupctrl,
+   .popupbody li.formsubmit {
+      background: var(--main-bg-color);
+   }
+   .pagination span a:hover,
+   .pagination span a.popupctrl:hover,
+   .button:hover {
+      background: var(--main-color);
+   }
+   .pagination span.selected a,
+   .button {
+      background: var(--main-color);
    }
    /*Шапка в личном кабинете*/
    dd.userprof_moduleinactive {
@@ -400,13 +430,13 @@
       font-size: 14px;
    }
    .memberprofiletabunder {
-      background-color: var(--border);
+      background-color: var(--main-bg-color);
       background-image: none;
       background-repeat: repeat-x;
    }
    .as-tabs dd {
       background: var(--main-bg-color);
-      border: 0;
+      border: none;
       padding: 0 5px;
       transition: 0.2s ease;
       border-bottom-left-radius: 5px;
@@ -414,7 +444,7 @@
    }
    .as-tabs dd:hover {
       background: var(--main-color);
-      border: 0;
+      border: none;
       padding: 0 5px;
       transition: 0.2s ease;
    }
@@ -431,7 +461,7 @@
    }
    /*Кнопка Изменить стиль профиля*/
    .userprof_button {
-      padding: 5px;
+      padding: 4px;
       margin: 0;
       border: 0px var(--border) solid;
       background: var(--main-color);
@@ -439,11 +469,14 @@
       transition: 0.2s ease;
    }
    .userprof_button:hover {
-      padding: 5px;
+      padding: 4px;
       margin: 0;
       border: 0px var(--border) solid;
       background: var(--main-bg-color);
       color: var(--color-font);
       transition: 0.2s ease;
+   }
+   .userprof_content {
+      background-color: #646262;
    }
 }
