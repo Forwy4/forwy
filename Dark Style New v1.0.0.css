@@ -114,7 +114,9 @@
    li.activitybit,
    dl.stats dd,
    .userprof_title,
-   .shade {
+   .shade,
+   em,
+   li.userprof_content {
       /*Сильнозаметный*/
       color: var(--font3) !important;
    }
@@ -360,6 +362,9 @@
       background-repeat: repeat;
       border-color: var(--border);
    }
+   .member_summary dl.stats dt {
+      width: 100%;
+   }
    /*Активность в профиле*/
    li.userprof_content {
       margin-bottom: .5em;
@@ -459,9 +464,12 @@
    .activitystream_block dd.selected {
       background: var(--main-color);
    }
+   #message_list .postbit {
+      background: var(--main-bg-color);
+   }
    /*Кнопка Изменить стиль профиля*/
    .userprof_button {
-      padding: 4px;
+      padding: 3px;
       margin: 0;
       border: 0px var(--border) solid;
       background: var(--main-color);
@@ -469,7 +477,7 @@
       transition: 0.2s ease;
    }
    .userprof_button:hover {
-      padding: 4px;
+      padding: 3px;
       margin: 0;
       border: 0px var(--border) solid;
       background: var(--main-bg-color);
