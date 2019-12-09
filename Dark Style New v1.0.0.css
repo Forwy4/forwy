@@ -672,6 +672,9 @@
    .postbit .postfoot .textcontrols a.forwardpost {
       background: url(images/wow-circle/buttons/reply_40b.png) no-repeat transparent left;
    }
+   .postbitlegacy .postfoot .textcontrols a.editpost {
+      background: url(images/wow-circle/buttons/edit_40b.png) no-repeat transparent left;
+   }
    .postbitlegacy .postfoot .textcontrols a.multiquote,
    .postbit .postfoot .textcontrols a.multiquote {
       background: url(images/wow-circle/buttons/multiquote-back_40b.png) no-repeat transparent left;
