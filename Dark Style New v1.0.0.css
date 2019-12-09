@@ -19,6 +19,7 @@
       --font3: #e2dede;
       /*Сильнозаметны текст*/
       --time-color: #8d99ff;
+      --quote-top: #424655;
    }
    #vbulletin_html {
       /*Основное изображение*/
@@ -117,7 +118,10 @@
    .userprof_title,
    .shade,
    em,
-   li.userprof_content {
+   li.userprof_content,
+   .postbitlegacy .postrow,
+   .postbitlegacy .userinfo .usertitle,
+   .postbitlegacy dl.userinfo_extra dt {
       /*Сильнозаметный*/
       color: var(--font3) !important;
    }
@@ -125,13 +129,30 @@
    dl.stats dt,
    #sidebar_container .userprof_content .blockrow,
    .moreactivity span,
-   .moreactivity a {
+   .moreactivity a,
+   .formcontrols .blockrow .description,
+   .postbitlegacy dl.userinfo_extra dd,
+   .postbitlegacy,
+   .postbitlegacy .posthead {
       /*Среднезаметный*/
       color: var(--font2) !important;
    }
    #footer_copyright > a.banner-corner > img {
       /*Убираем баннер каты х5*/
       display: none;
+   }
+   /*Цитаты*/
+   .bbcode_container div.bbcode_quote div.message,
+   .bbcode_postedby {
+      color: var(--font1) !important;
+   }
+   .bbcode_postedby {
+      background: var(--quote-top);
+      border-top-left-radius: 5px;
+   }
+   .bbcode_container div.bbcode_quote {
+      border: 1px var(--border) solid;
+      border-top-left-radius: 5px;
    }
    body > div.body_wrapper,
    #yuievtautoid-0 > div.body_wrapper {
@@ -290,6 +311,7 @@
    .navtabs li.selected a.navtab {
       background: var(--main-color) none repeat-x;
       position: relative;
+      border-top: 1px var(--time-color) solid;
    }
    /*Верхушка Форум Альбомы Группы... Не выбрано*/
    .navtabs li a.navtab {
@@ -340,8 +362,7 @@
       padding: 0;
    }
    /*Тоже там, где аватарка, только ниже*/
-   #sidebar_container .userprof_content .blockrow,
-   dl.stats dt {
+   #sidebar_container .userprof_content .blockrow {
       background: var(--main-bg-color);
       background-image: none;
       background-repeat: repeat;
@@ -401,12 +422,18 @@
       margin: 0;
       padding: 0 15px;
       transition: 0.2s ease;
+      border-top: 1px var(--border) solid;
+      border-left: 1px var(--border) solid;
+      border-right: 1px var(--border) solid;
    }
    dd.userprof_moduleinactive:hover {
       background: var(--main-color);
       margin: 0;
       padding: 0 15px;
       transition: 0.2s ease;
+      border-top: 1px var(--border) solid !important;
+      border-left: 1px var(--border) solid !important;
+      border-right: 1px var(--border) solid !important;
    }
    dl.tabslight dd.userprof_module a {
       color: #ffffff;
@@ -420,11 +447,23 @@
       padding: 0 15px;
       line-height: 22px;
       font-size: 14px;
+      border-top: 1px var(--time-color) solid;
+   }
+   dd.userprof_module:hover {
+      background: var(--main-color);
+      font-weight: bold;
+      display: inline;
+      padding: 0 15px;
+      line-height: 22px;
+      font-size: 14px;
+      border-top: 1px var(--time-color) solid;
    }
    .memberprofiletabunder {
       background-color: var(--main-bg-color);
       background-image: none;
       background-repeat: repeat-x;
+      border-top: 1px var(--border) solid;
+      border-bottom: 1px var(--border) solid;
    }
    .as-tabs dd {
       background: var(--main-bg-color);
@@ -433,16 +472,23 @@
       transition: 0.2s ease;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+      border-bottom: 1px var(--border) solid;
+      border-left: 1px var(--border) solid;
+      border-right: 1px var(--border) solid;
    }
    .as-tabs dd:hover {
       background: var(--main-color);
       border: none;
       padding: 0 5px;
       transition: 0.2s ease;
+      border-bottom: 1px var(--border) solid;
+      border-left: 1px var(--border) solid;
+      border-right: 1px var(--border) solid;
    }
    .activitystream_block dd.selected {
       background: var(--main-bg-color);
       border: none;
+      border-bottom: 1px var(--time-color) solid;
    }
    #activity_tab_container > div {
       overflow: hidden;
@@ -473,5 +519,91 @@
    }
    .userprof_content {
       background-color: #646262;
+   }
+   /*Приват*/
+   #usercp_nav .blockrow .active {
+      background: var(--main-color);
+   }
+   #usercp_nav .blockbody {
+      border: 1px solid #96725a;
+      border: none;
+      background: var(--main-bg-color) none;
+   }
+   #usercp_nav .blockrow {
+      background: var(--main-bg-color) none;
+      padding: 1px 10px;
+   }
+   #usercp_nav .blocksubhead {
+      background: var(--time-color);
+      border: 1px var(--border) solid;
+   }
+   .blocksubhead {
+      background: var(--main-color);
+      border-bottom: 1px var(--border) solid;
+   }
+   .blockhead {
+      background: var(--main-color);
+   }
+   .blockbody.settings_form_border {
+      border-right: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+   }
+   .pmlist .blockrow {
+      background: var(--main-bg-color);
+      border-left: 1px var(--border) solid;
+      border-right: 1px var(--border) solid;
+   }
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
+   .navpopupmenu.popupmenu.nohovermenu a.textcontrol,
+   a.textcontrol,
+   .actionbuttons .group .button {
+      background: var(--main-color) !important;
+      transition: 0.2s ease;
+   }
+   .navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover,
+   .navpopupmenu.popupmenu.nohovermenu a.textcontrol:hover,
+   a.textcontrol:hover,
+   .actionbuttons .group .button:hover {
+      background: var(--main-bg-color) !important;
+      transition: 0.2s ease;
+   }
+   .postbitlegacy,
+   .postbitlegacy .postbody,
+   .postbitlegacy .postdetails,
+   .postbitlegacy .userinfo,
+   .postbitlegacy .postfoot .textcontrols {
+      background: var(--main-bg-color) !important;
+   }
+   .postbitlegacy .postfoot .textcontrols {
+      border-top: 1px var(--border) solid;
+   }
+   .postbitlegacy .postfoot .textcontrols a.newreply,
+   .postbit .postfoot .textcontrols a.newreply {
+      background: url(images/wow-circle/buttons/quote_40b.png) no-repeat left;
+   }
+   .postbitlegacy .postfoot .textcontrols a {
+      background: transparent;
+   }
+   .postbitlegacy .postfoot .textcontrols a.quickreply,
+   .postbit .postfoot .textcontrols a.quickreply,
+   .postbitlegacy .postfoot .textcontrols a.forwardpost,
+   .postbit .postfoot .textcontrols a.forwardpost {
+      background: url(images/wow-circle/buttons/reply_40b.png) no-repeat transparent left;
+   }
+   .postbitlegacy .postfoot .textcontrols a.multiquote,
+   .postbit .postfoot .textcontrols a.multiquote {
+      background: url(images/wow-circle/buttons/multiquote-back_40b.png) no-repeat transparent left;
+   }
+   .postbit .postfoot .textcontrols a.multiquote:hover {
+      background: url(images/wow-circle/buttons/multiquote-back_40b.png) no-repeat transparent left;
+   }
+   .postbitlegacy .postfoot .textcontrols a.infraction,
+   .postbit .postfoot .textcontrols a.infraction {
+      background: url(images/wow-circle/buttons/add-infraction_sm.png) no-repeat transparent left;
+   }
+   .postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover,
+   .postbit .postfoot .textcontrols a.post_thanks_button:hover {
+      background: url(images/wow-circle/buttons/post_thanks.png) no-repeat transparent left;
    }
 }
