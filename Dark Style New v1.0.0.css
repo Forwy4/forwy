@@ -164,7 +164,8 @@
       border: 1px var(--border) solid;
       border-top-left-radius: 5px;
    }
-   .bbcode_container div.bbcode_quote {
+   .bbcode_container div.bbcode_quote,
+   .bbcode_container pre.bbcode_code {
       background: var(--quote);
       padding: 5px;
    }
