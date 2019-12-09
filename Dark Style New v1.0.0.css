@@ -296,11 +296,14 @@
    }
    .forumbit_nopost .subforumdescription,
    .userprof_headers,
-   .threadlisthead,
-   .postbitlegacy .posthead {
+   .threadlisthead {
       /*Цвет под шапкой*/
       color: #fff4ed;
       background: var(--main-bg-color) none repeat-x;
+   }
+   .postbitlegacy .posthead {
+      background: rgba(0, 0, 0, .59);
+      border-top: 1px var(--border) solid;
    }
    #forumbits.forumbits .forumhead {
       border-color: var(--border);
