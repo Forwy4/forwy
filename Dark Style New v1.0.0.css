@@ -9,7 +9,7 @@
    :root {
       --main-color: #000201;
       --main-bg-color: #646262;
-      --body-color: #eae9e7;
+      --body-color: #848382;
       --border: #ece0eb;
       --color-font: #e6e4e4;
       --font1: #7e7b7b;
@@ -20,6 +20,7 @@
       /*Сильнозаметны текст*/
       --time-color: #8d99ff;
       --quote-top: #424655;
+      --quote: #60626d;
    }
    #vbulletin_html {
       /*Основное изображение*/
@@ -82,7 +83,8 @@
    }
    body,
    .userprof,
-   .userprof_content {
+   .userprof_content,
+   .thread_info {
       /*Основной шрифт*/
       font-family: Tahoma, Calibri, Verdana, Geneva, sans-serif;
       color: var(--color-font);
@@ -107,7 +109,8 @@
    }
    .forumbit_post .forumrow,
    .forumbit_post .forumstats li,
-   .forumbit_post .forumstats_2 li {
+   .forumbit_post .forumstats_2 li,
+   .postbitlegacy .lastedited {
       /*Малозаметный*/
       color: var(--font1) !important;
    }
@@ -121,7 +124,12 @@
    li.userprof_content,
    .postbitlegacy .postrow,
    .postbitlegacy .userinfo .usertitle,
-   .postbitlegacy dl.userinfo_extra dt {
+   .postbitlegacy dl.userinfo_extra dt,
+   .threadbit .threadtitle,
+   .threadbit .threadmeta,
+   .threadbit .threadlastpost dd,
+   .threadbit .threadpostedin p,
+   .searchtitle {
       /*Сильнозаметный*/
       color: var(--font3) !important;
    }
@@ -133,7 +141,9 @@
    .formcontrols .blockrow .description,
    .postbitlegacy dl.userinfo_extra dd,
    .postbitlegacy,
-   .postbitlegacy .posthead {
+   .postbitlegacy .posthead,
+   .above_threadlist .threadpagenav .threadpagestats,
+   .above_postlist .pagination_top .postpagestats {
       /*Среднезаметный*/
       color: var(--font2) !important;
    }
@@ -144,7 +154,7 @@
    /*Цитаты*/
    .bbcode_container div.bbcode_quote div.message,
    .bbcode_postedby {
-      color: var(--font1) !important;
+      color: var(--font3) !important;
    }
    .bbcode_postedby {
       background: var(--quote-top);
@@ -154,12 +164,38 @@
       border: 1px var(--border) solid;
       border-top-left-radius: 5px;
    }
+   .bbcode_container div.bbcode_quote {
+      background: var(--quote);
+      padding: 5px;
+   }
+   .forumbit_post .forumrow {
+      display: non
+   }
+   .quote_expander {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 12px;
+      text-align: center;
+      color: rgb(63, 63, 63);
+      cursor: pointer;
+      padding-top: 65px;
+      background: -webkit-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+      background: -moz-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+      background: -o-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+      background: linear-gradient(to bottom, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+   }
    body > div.body_wrapper,
    #yuievtautoid-0 > div.body_wrapper {
       /*Цвет на задней картинке*/
       background: linear-gradient(to top, var(--body-color) 0%, transparent 100%);
    }
-   .wgo_block .blockbody {
+   .wgo_block .blockbody,
+   .thread_info .blockbody {
       background: #646262;
    }
    .footer {
@@ -259,10 +295,15 @@
       padding: 0 5px;
    }
    .forumbit_nopost .subforumdescription,
-   .userprof_headers {
+   .userprof_headers,
+   .threadlisthead,
+   .postbitlegacy .posthead {
       /*Цвет под шапкой*/
       color: #fff4ed;
       background: var(--main-bg-color) none repeat-x;
+   }
+   #forumbits.forumbits .forumhead {
+      border-color: var(--border);
    }
    .navlinks {
       background: var(--main-bg-color);
@@ -284,8 +325,40 @@
       width: 70px;
    }
    .forumbit_post .forumstats li:first-child,
+   .forumbit_post .forumstats_2 li:first-child,
+   .threadbit .threadstats li:first-child,
    #forum186 > div.forumbit_post.L2 > div > ul.forumstats_2.td > li:nth-child(1) {
       background: #414140;
+   }
+   .toolsmenu #forumtools h6 a,
+   .toolsmenu #threadtools h6 a {
+      background: url(images/wow-circle/icons/hammer.png) var(--main-bg-color) no-repeat;
+      background-position: 5px 6px;
+      background-size: 13px;
+      padding-left: 23px;
+      border-top: 1px var(--border) solid;
+   }
+   .toolsmenu #forumsearch h6 a,
+   .toolsmenu #searchthread h6 a {
+      background: url(images/wow-circle/buttons/search.png) var(--main-bg-color) no-repeat;
+      background-repeat: no-repeat;
+      background-position: 5px 6px;
+      background-size: 13px;
+      padding-left: 23px;
+   }
+   .toolsmenu #threadrating h6 a {
+      background: url(images/wow-circle/icons/rating.png) var(--main-bg-color) no-repeat;
+      background-repeat: no-repeat;
+      background-position: 5px 6px;
+      background-size: 13px;
+      padding-left: 23px;
+   }
+   .toolsmenu #displaymodes h6 a {
+      background: url(images/wow-circle/icons/display.png) var(--main-bg-color) no-repeat;
+      background-position: 5px 6px;
+      background-size: 13px;
+      padding-left: 23px;
+      border-top: 1px var(--border) solid;
    }
    #navbar_notice_7 {
       /*Актуальные"Новости"*/
@@ -330,7 +403,11 @@
    }
    .forumhead,
    .wgo_block .blockhead,
-   #sidebar_container .blocksubhead {
+   #sidebar_container .blocksubhead,
+   .toolsmenu,
+   .forum_info .blockhead,
+   h2.searchlisthead,
+   .thread_info h4 {
       /*Шапка заголовков разделов*/
       background: var(--main-color) none;
    }
@@ -344,6 +421,7 @@
       background: none !important;
       border: none;
    }
+   /*Фон для разделов на главной*/
    .forumbit_post {
       background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
       border-bottom: 1px solid;
@@ -575,8 +653,10 @@
    .postbitlegacy .postfoot .textcontrols {
       background: var(--main-bg-color) !important;
    }
-   .postbitlegacy .postfoot .textcontrols {
+   .postbitlegacy .postfoot .textcontrols,
+   .threadlisthead {
       border-top: 1px var(--border) solid;
+      border-bottom: 1px var(--border) solid;
    }
    .postbitlegacy .postfoot .textcontrols a.newreply,
    .postbit .postfoot .textcontrols a.newreply {
@@ -605,5 +685,42 @@
    .postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover,
    .postbit .postfoot .textcontrols a.post_thanks_button:hover {
       background: url(images/wow-circle/buttons/post_thanks.png) no-repeat transparent left;
+   }
+   .threadbit,
+   .threadbit:nth-child(even) .sticky,
+   .threadbit:nth-child(odd) .sticky,
+   .threadbit:nth-child(odd) .nonsticky,
+   .threadbit:nth-child(even) .nonsticky {
+      background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+      border-bottom: 1px solid;
+      opacity: 0.8;
+   }
+   .threadbit,
+   .threadbit:nth-child(even) .sticky:hover,
+   .threadbit:nth-child(odd) .sticky:hover,
+   .threadbit:nth-child(odd) .nonsticky:hover,
+   .threadbit:nth-child(even) .nonsticky:hover {
+      background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+      border-bottom: 1px solid;
+      opacity: 1;
+   }
+   /*Кнопка Новая тема, закрытая тема*/
+   .newcontent_textcontrol {
+      background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+      border-radius: 4px;
+      color: rgb(255, 255, 255);
+      padding: 6px 15px 6px 15px;
+      border: 0;
+      opacity: 0.8;
+      transition: 0.3s ease;
+   }
+   .newcontent_textcontrol:hover {
+      background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+      border-radius: 4px;
+      color: rgb(255, 255, 255);
+      padding: 6px 15px 6px 15px;
+      border: 0;
+      opacity: 1;
+      transition: 0.3s ease;
    }
 }
