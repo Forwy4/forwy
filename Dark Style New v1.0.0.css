@@ -167,7 +167,6 @@
    .bbcode_container div.bbcode_quote,
    .bbcode_container pre.bbcode_code {
       background: var(--quote);
-      padding: 5px;
    }
    .forumbit_post .forumrow {
       display: non
@@ -697,7 +696,8 @@
    .threadbit:nth-child(even) .nonsticky {
       background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
       border-bottom: 1px solid;
-      opacity: 0.8;
+      opacity: 0.9;
+      transition: 0.1s ease;
    }
    .threadbit,
    .threadbit:nth-child(even) .sticky:hover,
@@ -707,6 +707,7 @@
       background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
       border-bottom: 1px solid;
       opacity: 1;
+      transition: 0.1s ease;
    }
    /*Кнопка Новая тема, закрытая тема*/
    .newcontent_textcontrol {
