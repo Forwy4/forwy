@@ -26,48 +26,13 @@
 		/*Основное изображение*/
 		background: var(--main-color) url(https://i.imgur.com/zklXXhc.jpg) no-repeat;
 	}
-	/*Замена значка сообщений*/
-	#forum_statusicon_109,
-	#forum_statusicon_113,
-	#forum_statusicon_116,
-	#forum_statusicon_118,
-	#forum_statusicon_121,
-	#forum_statusicon_123,
-	#forum_statusicon_125,
-	#forum_statusicon_739,
-	#forum_statusicon_297,
-	#forum_statusicon_1680,
-	#forum_statusicon_472,
-	#forum_statusicon_471,
-	#forum_statusicon_1457,
-	#forum_statusicon_11,
-	#forum_statusicon_15,
-	#forum_statusicon_1036,
-	#forum_statusicon_522,
-	#forum_statusicon_692,
-	#forum_statusicon_915,
-	#forum_statusicon_1458,
-	#forum_statusicon_781,
-	#forum_statusicon_573,
-	#forum_statusicon_17,
-	#forum_statusicon_1431,
-	#forum_statusicon_31,
-	#forum_statusicon_455,
-	#forum_statusicon_1043,
-	#forum_statusicon_1074,
-	#forum_statusicon_296,
-	#forum_statusicon_587,
-	#forum_statusicon_108,
-	#forum_statusicon_594,
-	#forum_statusicon_103,
-	#forum_statusicon_284,
-	#forum_statusicon_331,
-	#forum_statusicon_110,
-	#forum_statusicon_595,
-	#forum_statusicon_393,
-	#forum_statusicon_729,
-	#forum_statusicon_186 {
+	/*Замена значка сообщений (нет новых сообщений)*/
+	.old > .table > .td > img {
 		content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
+	}
+	/*Замена маленького значка сообщений (нет новых сообщений)*/
+	.subforum > img {
+		content: url(https://forum.wowcircle.net/images/wow-circle/statusicon/subforum_old-48.png);
 	}
 	/*Замена значка бесконечности(ссылка)*/
 	#forum_statusicon_378,
@@ -900,7 +865,46 @@
 		transition: 0.2s ease;
 	}
 	.cke_skin_kama .cke_dialog_body .cke_dialog_title {
-		border-bottom: var(--border) 1px solid;
+		border-bottom: 1px var(--border) solid;
 		padding: 10px;
+	}
+	/*Двойная стрелка вправо*/
+	div > div.forumlastpost.td > div > p.lastposttitle > a:nth-child(2) > img,
+	div > div.forumlastpost.td > div > p.lastposttitle > a:nth-child(3) > img,
+	div > div > div.bbcode_postedby > a,
+	div > dl > dd:nth-child(3) > a:nth-child(2) > img,
+	#yui-gen11 > span.first_last > a > img,
+	div > dl > dd:nth-child(2) > a > img,
+	#yui-gen117 > span.first_last > a > img {
+		content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
+	}
+	/*Двойная стрелка влево*/
+	#yui-gen14 > span.first_last > a > img,
+	#yui-gen11 > span:nth-child(3) > a > img,
+	#yui-gen117 > span:nth-child(3) > a > img {
+		content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
+		transform: rotate(180deg);
+	}
+	/*Одиночная стрелка вправо*/
+	#yui-gen11 > span.prev_next > a > img,
+	#yui-gen5 > span.prev_next > a > img,
+	#yui-gen2 > span:nth-child(11) > a > img,
+	#yui-gen2 > span.prev_next > a > img,
+	#yui-gen117 > span.prev_next > a > img {
+		content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
+	}
+	/*Одиночная стрелка влево*/
+	#yui-gen14 > span.prev_next > a > img,
+	#yui-gen5 > span:nth-child(6) > a > img,
+	#yui-gen2 > span:nth-child(6) > a > img,
+	#yui-gen11 > span:nth-child(4) > a > img,
+	#yui-gen117 > span:nth-child(4) > a > img {
+		content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
+		transform: rotate(180deg);
+	}
+	/*Фикс плавающих стрелок*/
+	.pagination span.prev_next a,
+	.pagination span.first_last a {
+		top: 0 !important;
 	}
 }
