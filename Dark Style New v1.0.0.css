@@ -921,8 +921,16 @@
       background: var(--main-bg-color);
       color: var(--color-font);
    }
+   #searchbits .threadstats {
+      max-width: 20%;
+      right: 0.5em;
+      position: relative;
+   }
    .threadbit .threadlastpost dd {
-      width: 100%;
+      min-width: 100%;
+      width: 300px;
+      position: relative;
+      right: 7em;
    }
    /*Двойная стрелка вправо*/
    div > div > div.bbcode_postedby > a,
