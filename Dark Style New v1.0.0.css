@@ -873,13 +873,12 @@
 		padding: 10px;
 	}
 	/*Двойная стрелка вправо*/
-	div > div.forumlastpost.td > div > p.lastposttitle > a:nth-child(2) > img,
-	div > div.forumlastpost.td > div > p.lastposttitle > a:nth-child(3) > img,
 	div > div > div.bbcode_postedby > a,
 	div > dl > dd:nth-child(3) > a:nth-child(2) > img,
 	#yui-gen11 > span.first_last > a > img,
 	div > dl > dd:nth-child(2) > a > img,
-	#yui-gen117 > span.first_last > a > img {
+	#yui-gen117 > span.first_last > a > img,
+	div > div.forumlastpost.td > div > p.lastposttitle > a > img {
 		content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
 	}
 	/*Двойная стрелка влево*/
