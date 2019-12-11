@@ -30,6 +30,10 @@
 	.old > .table > .td > img {
 		content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
 	}
+	/*Замена значка сообщений (есть новые сообщения)*/
+	.new > .table > .td > img {
+		content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203144892743690/forum_new-48.png);
+	}
 	/*Замена маленького значка сообщений (нет новых сообщений)*/
 	.subforum > img {
 		content: url(https://forum.wowcircle.net/images/wow-circle/statusicon/subforum_old-48.png);
