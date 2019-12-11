@@ -32,7 +32,7 @@
    }
    /*Замена значка сообщений (есть новые сообщения)*/
    .new > .table > .td > img {
-      content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203144892743690/forum_new-48.png);
+      content: url(https://cdn.discordapp.com/attachments/575078879572656128/654346410241687553/forum_new-48.png);
    }
    /*Замена маленького значка сообщений (нет новых сообщений)*/
    .subforum > img {
@@ -116,10 +116,6 @@
    .above_postlist .pagination_top .postpagestats {
       /*Среднезаметный*/
       color: var(--font2) !important;
-   }
-   #footer_copyright > a.banner-corner > img {
-      /*Убираем баннер каты х5*/
-      display: none;
    }
    /*Цитаты*/
    .bbcode_container div.bbcode_quote div.message,
@@ -527,6 +523,10 @@
       background-image: none;
       background-repeat: repeat;
    }
+   .userprof_content {
+      background: var(--body-color);
+      color: var(--color-font);
+   }
    li.activitybit,
    li.userprof_content,
    .userprof_moduleinactive,
@@ -716,7 +716,8 @@
    .navpopupmenu.popupmenu.nohovermenu a.popupctrl,
    .navpopupmenu.popupmenu.nohovermenu a.textcontrol,
    a.textcontrol,
-   .actionbuttons .group .button {
+   .actionbuttons .group .button,
+   #inlinemod_formctrls .popupctrl {
       background: var(--main-color) !important;
       transition: 0.2s ease;
    }
@@ -731,7 +732,8 @@
    .postbitlegacy .postbody,
    .postbitlegacy .postdetails,
    .postbitlegacy .userinfo,
-   .postbitlegacy .postfoot .textcontrols {
+   .postbitlegacy .postfoot .textcontrols,
+   #inlinemod_formctrls .popupctrl:hover {
       background: var(--main-bg-color) !important;
    }
    .postbitlegacy .postfoot .textcontrols,
@@ -821,6 +823,9 @@
       transition: 0.3s ease;
    }
    /*Вставить изображение*/
+   .cke_skin_kama .cke_dialog_title {
+      color: var(--color-font);
+   }
    .cke_skin_kama .cke_dialog .cke_dialog_body {
       background: var(--main-color) none;
    }
