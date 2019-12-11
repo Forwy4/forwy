@@ -922,7 +922,8 @@
       color: var(--color-font);
    }
    #searchbits .threadstats {
-      max-width: 20%;
+      min-width: 180px;
+      max-height: 37px;
       right: 0.5em;
       position: relative;
    }
