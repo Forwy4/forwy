@@ -921,6 +921,9 @@
       background: var(--main-bg-color);
       color: var(--color-font);
    }
+   .threadbit .threadlastpost dd {
+      width: 100%;
+   }
    /*Двойная стрелка вправо*/
    div > div > div.bbcode_postedby > a,
    div > dl > dd:nth-child(3) > a:nth-child(2) > img,
@@ -936,7 +939,8 @@
    #yui-gen11 > span:nth-child(3) > a > img,
    #yui-gen117 > span:nth-child(3) > a > img,
    #yui-gen108 > span:nth-child(3) > a > img,
-   #yui-gen120 > span:nth-child(3) > a > img {
+   #yui-gen120 > span:nth-child(3) > a > img,
+   #yui-gen140 > span:nth-child(3) > a > img {
       content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
       transform: rotate(180deg);
    }
@@ -947,7 +951,8 @@
    #yui-gen2 > span.prev_next > a > img,
    #yui-gen117 > span.prev_next > a > img,
    #yui-gen108 > span:nth-child(11) > a > img,
-   #yui-gen120 > span.prev_next > a > img {
+   #yui-gen120 > span.prev_next > a > img,
+   #yui-gen140 > span.prev_next > a > img {
       content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
    }
    /*Одиночная стрелка влево*/
@@ -957,7 +962,8 @@
    #yui-gen11 > span:nth-child(4) > a > img,
    #yui-gen117 > span:nth-child(4) > a > img,
    .threadpagenav > #yui-gen108 > span:nth-child(4) > a > img,
-   #yui-gen120 > span:nth-child(4) > a > img {
+   #yui-gen120 > span:nth-child(4) > a > img,
+   #yui-gen140 > span:nth-child(4) > a > img {
       content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
       transform: rotate(180deg);
    }
