@@ -36,7 +36,7 @@
    }
    *::selection {
       color: black;
-      background-color: white !important;
+      background-color: #beca14 !important;
    }
    html {
       /*Основное изображение*/
