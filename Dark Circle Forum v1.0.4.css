@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dark Circle Forum
 @namespace      https://github.com/Forwy4/forwy
-@version        1.0.4
+@version        1.0.3
 @description    Dark style for forum.wowcircle.com
 @author         Forwy
 ==/UserStyle== */
@@ -22,12 +22,10 @@
    #navbar_notice_7 > strong > b > p:nth-child(3) > a > span {
       /*Фикс Актуальные новости 1 ссылка*/
       color: var(--links-color) !important;
-      transition: 0.5s ease;
    }
    #navbar_notice_7 > strong > b > p:nth-child(3) > a > span:hover {
       /*Фикс Актуальные новости 1 ссылка hover*/
       color: var(--color-font) !important;
-      transition: 0.5s ease;
    }
    /*Одинковый цвет для всего текста*/
    .postbitlegacy .postrow,
@@ -61,8 +59,7 @@
    .signaturecontainer,
    div.body_wrapper,
    .userprof_content,
-   li.userprof_content,
-   .above_threadlist .threadpagenav .threadpagestats {
+   li.userprof_content {
       font-family: system-ui;
       color: var(--color-font) !important;
    }
@@ -72,8 +69,7 @@
    .userprof_title,
    #sidebar_container.member_summary h1,
    li.sgicon .maincol p.description,
-   #sidebar_container .blocksubhead span.blocktitle,
-   .threadbit .alt {
+   #sidebar_container .blocksubhead span.blocktitle {
       font-family: system-ui;
       color: white !important;
    }
@@ -82,6 +78,7 @@
    .footer_copyright,
    .footer_morecopyright,
    .footer_time,
+   .threadbit .alt,
    dd,
    .threadbit .threadmeta,
    .shade,
@@ -771,7 +768,7 @@
       padding-right: 4px;
       padding-left: 9px;
       border: 1px var(--border) solid;
-      color: var(--color-font) !important;
+      color: var(--color-font);
    }
    /*Кнопки переключения страниц hover*/
    .pagination span a.popupctrl:hover,
