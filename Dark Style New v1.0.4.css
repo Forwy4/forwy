@@ -501,6 +501,10 @@
 		background: var(--main-bg-color);
 		border: var(--border) 1px solid;
 	}
+	#navbar_notice_7 > strong > b > p:nth-child(3) > a > mark {
+		background: transparent;
+		color: var(--color-font);
+	}
 	#navbar_notice_7 > strong > b > p:nth-child(3) > a:nth-child(1) > span,
 	#navbar_notice_7 > strong > b > span {
 		/*Лечим ссылки Актуальные новости"*/
