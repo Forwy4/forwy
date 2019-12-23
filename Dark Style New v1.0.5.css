@@ -1020,6 +1020,12 @@ div.spoiler div[id] {
 .postbit .postfoot .textcontrols a.yellowcard {
 	background: url(images/wow-circle/buttons/yellow-card_sm.png) no-repeat transparent left;
 }
+td.blockrow div a[href*=member], td.blockrow div {
+	display: none;
+}
+div.blockbody td:nth-child(1) img {
+	display: none;
+}
 /*Выбор стиля + поля ввода*/
 select {
 	font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
@@ -1032,21 +1038,63 @@ select {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
-select:focus {
+select:focus, input:focus {
 	color: black;
 	background: white;
 	border-color: var(--border);
 	transition: 0.2s ease;
 }
-.textbox:focus {
+.textbox:focus, input:focus {
 	color: black;
 	border-color: var(--main-color);
 	transition: 0.5s ease;
 }
-.textbox {
+.textbox, input {
 	font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
 	color: var(--color-font);
 	background: rgb(0, 0, 2) none;
 	border-color: var(--border);
+}
+.quickedit {
+	border-color: var(--border);
+}
+.attachmentrow {
+	background: var(--main-bg-color);
+	border-color: var(--border);
+}
+/*Страница регистрации*/
+.toplinks .logindetails, .toplinks ul.nouser li a {
+	background: var(--main-bg-color);
+	border-radius: 5px;
+	color: var(--color-font);
+}
+.toplinks form input.loginbutton {
+	background: var(--main-color);
+	border: 0;
+	padding: 4px;
+	width: 50px;
+	border-radius: 5px;
+}
+.toplinks ul.nouser li a:hover, .toplinks form input.loginbutton:hover, td > div:nth-child(2) input.button {
+	background: var(--quote);
+	border-radius: 5px;
+	color: var(--color-font);
+	cursor: pointer;
+	transition: 0.5s;
+}
+td > div:nth-child(2) input.button {
+	transform: scale(1.5);
+}
+/*Миниатюры*/
+.attachments, legend {
+	background: transparent;
+	border: 0;
+	color: var(--color-font);
+	padding-bottom: 3px;
+	font-size: 15px;
+}
+legend img {
+	transform: scale(1.5);
+	padding-bottom: 3px;
 }
 }
