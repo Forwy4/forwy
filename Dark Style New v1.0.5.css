@@ -922,26 +922,24 @@ div.forum_info .blockbody, .block .blockbody {
 	padding-bottom: 15px;
 }
 /*Двойная стрелка вправо*/
-div > div > div.bbcode_postedby > a, div > dl > dd:nth-child(3) > a:nth-child(2) > img, #yui-gen11 > span.first_last > a > img, div > dl > dd:nth-child(2) > a > img, #yui-gen117 > span.first_last > a > img, div > div.forumlastpost.td > div > p.lastposttitle > a > img, span.first_last > a > img {
+span.first_last img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
 }
 /*Двойная стрелка влево*/
-#yui-gen14 > span.first_last > a > img, #yui-gen11 > span:nth-child(3) > a > img, #yui-gen117 > span:nth-child(3) > a > img, #yui-gen108 > span:nth-child(3) > a > img, #yui-gen120 > span:nth-child(3) > a > img, #yui-gen140 > span:nth-child(3) > a > img {
+span.first_last [rel=start] img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654036639487754241/last-right.png);
-	transform: rotate(180deg);
-}
-/*Одиночная стрелка вправо*/
-#yui-gen11 > span.prev_next > a > img, #yui-gen5 > span.prev_next > a > img, #yui-gen2 > span:nth-child(11) > a > img, #yui-gen2 > span.prev_next > a > img, #yui-gen117 > span.prev_next > a > img, #yui-gen108 > span:nth-child(11) > a > img, #yui-gen120 > span.prev_next > a > img, #yui-gen140 > span.prev_next > a > img {
-	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
-}
-/*Одиночная стрелка влево*/
-#yui-gen14 > span.prev_next > a > img, #yui-gen5 > span:nth-child(6) > a > img, #yui-gen2 > span:nth-child(6) > a > img, #yui-gen11 > span:nth-child(4) > a > img, #yui-gen117 > span:nth-child(4) > a > img, .threadpagenav > #yui-gen108 > span:nth-child(4) > a > img, #yui-gen120 > span:nth-child(4) > a > img, #yui-gen140 > span:nth-child(4) > a > img {
-	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
 	transform: rotate(180deg);
 }
 /*Фикс плавающих стрелок*/
 .pagination span.prev_next a, .pagination span.first_last a {
 	top: 0 !important;
+}
+span.prev_next img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
+}
+span.prev_next [rel=prev] img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654037309443801118/next-right.png);
+	transform: rotate(180deg);
 }
 /*Spoiler*/
 .spoiler {
