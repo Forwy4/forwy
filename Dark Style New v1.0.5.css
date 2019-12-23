@@ -42,11 +42,11 @@
 html {
 	background: no-repeat var(--main-color) url(https://i.imgur.com/zklXXhc.jpg);
 }
-/*Замена значка сообщений (Нет новых сообщений)*/
+/*Замена значка сообщений (нет новых сообщений)*/
 .old > .table > .td > img, .old > .L2 > .forumrow > .foruminfo > img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
 }
-/*Замена значка сообщений (Есть новые сообщения)*/
+/*Замена значка сообщений (есть новые сообщения)*/
 .new > .table > .td > img, .new > .L2 > .forumrow > .foruminfo > img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654346410241687553/forum_new-48.png);
 }
@@ -472,9 +472,6 @@ dl.tabslight {
 	line-height: 28px;
 	min-width: 50px;
 	background: var(--main-color);
-}
-.cke_skin_kama * {
-	color: black !important;
 }
 .forumhead, .wgo_block .blockhead, #sidebar_container .blocksubhead, .toolsmenu, .forum_info .blockhead, h2.searchlisthead, .thread_info h4 {
 	/*Шапка заголовков разделов*/
@@ -976,6 +973,9 @@ div.spoiler div[id] {
 	height: 100%;
 	background-image: linear-gradient(to right, #4d4e58, #626473);
 	font-size: 0;
+}
+.sphide:hover {
+	background-image: linear-gradient(to right, #4d4e58, #818499);
 }
 .spoiler .vsqminus, .spoiler h2 {
 	background: var(--main-color) url(images/wow-circle/misc/icon_plus.png);
