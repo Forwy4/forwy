@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark Circle Forum (WoW Circle Style)
 @namespace https://github.com/Forwy4/forwy
-@version 1.0.4
+@version 1.0.5
 @description Dark style for forum.wowcircle.net
 @author Forwy
 ==/UserStyle== */
@@ -40,8 +40,7 @@
 }
 /*Основное изображение*/
 html {
-	background: var(--main-color) url(https://i.imgur.com/zklXXhc.jpg);
-	background-repeat: no-repeat;
+	background: no-repeat var(--main-color) url(https://i.imgur.com/zklXXhc.jpg);
 }
 /*Замена значка сообщений (нет новых сообщений)*/
 .old > .table > .td > img, .old > .L2 > .forumrow > .foruminfo > img {
@@ -55,9 +54,13 @@ html {
 .subforum > img {
 	content: url(https://forum.wowcircle.net/images/wow-circle/statusicon/subforum_old-48.png);
 }
-/*Замена значка бесконечности(ссылка) НЕДОДЕЛАНО*/
-#forum_statusicon_378, #forum_statusicon_1706, #forum_statusicon_1430, #forum_statusicon_1052, #forum_statusicon_1636, #forum_statusicon_1508, #forum_statusicon_1072, #forum_statusicon_1070, #forum_statusicon_1073 {
+/*Замена значка бесконечности(ссылка)*/
+.subforum img[src*=link-48] {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653233016654528523/subforum_link-48.png);
+}
+/*Последнее сообщение*/
+a img[src*=lastpost-right], a img[src*=viewpost-right] {
+	content: url(https://i.imgur.com/qbKvp3O.png);
 }
 /*Основной шрифт*/
 body, .userprof, .userprof_content, .thread_info {
@@ -543,7 +546,15 @@ li.activitybit, li.userprof_content, .userprof_moduleinactive, .formcontrols .bl
 	background: var(--main-bg-color);
 	border-color: var(--border);
 }
-.pagination span a:hover, .pagination span a.popupctrl:hover, .button:hover {
+.pagination span a.popupctrl {
+	background: no-repeat center left url(images/wow-circle/misc/black_downward_arrow.png) var(--main-bg-color);
+	border-color: var(--border);
+}
+.pagination span a.popupctrl:hover {
+	background: no-repeat center left url(images/wow-circle/misc/black_downward_arrow.png) var(--main-color);
+	border-color: var(--border);
+}
+.pagination span a:hover, .button:hover {
 	background: var(--main-color);
 	border-color: var(--border);
 }
