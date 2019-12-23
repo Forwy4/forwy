@@ -956,20 +956,28 @@ span.prev_next [rel=prev] img {
 .spoiler {
 	background: var(--quote);
 	border: 1px var(--border) solid;
+	position: relative;
+	height: 100%;
+}
+div.spoiler div[id] {
+	position: relative;
+	padding: 10px 125px 10px 10px;
 }
 .spoiler > div {
-	text-align: center;
-	padding: 5px;
+	padding-right: 125px;
+	text-overflow: clip;
+	border-top: 0;
 }
 .sphide {
-	position: relative;
-	text-align: right;
-	font-family: Arial serif;
-	font-size: 12px;
-	margin: 0 auto;
-	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 125px;
+	height: 100%;
+	background-image: linear-gradient(to right, #4d4e58, #626473);
+	font-size: 0;
 }
-.spoiler > h2 {
+.spoiler .vsqminus, .spoiler h2 {
 	background: var(--main-color) url(images/wow-circle/misc/icon_plus.png);
 	background-repeat: no-repeat;
 	font: italic normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
