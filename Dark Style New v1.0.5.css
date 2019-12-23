@@ -54,6 +54,10 @@ html {
 .subforum > img {
 	content: url(https://forum.wowcircle.net/images/wow-circle/statusicon/subforum_old-48.png);
 }
+/*Замена маленького значка сообщений (нет новых сообщений)*/
+.subforum > img[src*=new] {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/658749953128136704/subforum_old-48.png);
+}
 /*Замена значка бесконечности(ссылка)*/
 .subforum img[src*=link-48] {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653233016654528523/subforum_link-48.png);
@@ -101,6 +105,9 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	padding-top: 25px;
+}
+blockquote div.quote_expander > a {
+	display: none;
 }
 .bbcode_postedby {
 	background: var(--quote-top);
@@ -151,6 +158,7 @@ a:hover {
 	word-wrap: break-word;
 	border: 0;
 	font-style: normal;
+	position: relative;
 }
 .quote_expander {
 	-webkit-box-sizing: border-box;
@@ -167,6 +175,7 @@ a:hover {
 	background: -o-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
 	background: linear-gradient(to bottom, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
 	position: relative;
+	display: none;
 }
 body > div.body_wrapper, #yuievtautoid-0 > div.body_wrapper {
 	/*Цвет на задней картинке*/
