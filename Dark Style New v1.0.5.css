@@ -42,11 +42,11 @@
 html {
 	background: no-repeat var(--main-color) url(https://i.imgur.com/zklXXhc.jpg);
 }
-/*Замена значка сообщений (нет новых сообщений)*/
+/*Замена значка сообщений (Нет новых сообщений)*/
 .old > .table > .td > img, .old > .L2 > .forumrow > .foruminfo > img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
 }
-/*Замена значка сообщений (есть новые сообщения)*/
+/*Замена значка сообщений (Есть новые сообщения)*/
 .new > .table > .td > img, .new > .L2 > .forumrow > .foruminfo > img {
 	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654346410241687553/forum_new-48.png);
 }
