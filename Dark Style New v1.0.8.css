@@ -1,0 +1,1139 @@
+/* ==UserStyle==
+@name Dark Circle Forum (WoW Circle Style)
+@namespace https://github.com/Forwy4/forwy
+@version 1.0.8
+@description Dark style for forum.wowcircle.net
+@author Forwy
+==/UserStyle== */
+@-moz-document domain("forum.wowcircle.net") {
+:root {
+	--main-color: #000002;
+	--main-bg-color: #3a3a3c;
+	--body-color: #737373;
+	--border: #887e88;
+	--color-font: #e8e7e7;
+	--font1: #7e7b7b;
+	/*Малозаметный текст*/
+	--font2: #bbb6b6;
+	/*Среднезаметный текст*/
+	--font3: #e2dede;
+	/*Сильнозаметный текст*/
+	--time-color: #8d99ff;
+	--quote-top: #30333e;
+	--quote: #4d4e58;
+}
+*::-webkit-scrollbar {
+	min-width: 15px !important;
+	height: 10px !important;
+	background: var(--main-bg-color) !important;
+	border: 1px solid var(--border) !important;
+	border-radius: 5px;
+}
+*::-webkit-scrollbar-thumb {
+	min-height: 28px !important;
+	background: var(--body-color) !important;
+	border-radius: 5px;
+}
+*::selection {
+	color: black;
+	background-color: #beca14 !important;
+}
+/*Основное изображение*/
+html {
+	background: no-repeat var(--main-color) url(https://i.imgur.com/zklXXhc.jpg);
+	position: relative;
+}
+/*Замена значка сообщений (нет новых сообщений)*/
+.old > .table > .td > img, .old > .L2 > .forumrow > .foruminfo > img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
+}
+/*Замена значка сообщений (есть новые сообщения)*/
+.new > .table > .td > img, .new > .L2 > .forumrow > .foruminfo > img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654346410241687553/forum_new-48.png);
+}
+/*Замена маленького значка сообщений (нет новых сообщений)*/
+.subforum > img {
+	content: url(https://forum.wowcircle.net/images/wow-circle/statusicon/subforum_old-48.png);
+}
+/*Замена маленького значка сообщений (нет новых сообщений)*/
+.subforum > img[src*=new] {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/658749953128136704/subforum_old-48.png);
+}
+/*Замена значка бесконечности(ссылка)*/
+.subforum img[src*=link-48] {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/653233016654528523/subforum_link-48.png);
+}
+/*Последнее сообщение*/
+a img[src*=lastpost-right], a img[src*=viewpost-right] {
+	content: url(https://i.imgur.com/Tk3JKfT.png);
+}
+/*Основной шрифт*/
+body, .userprof, .userprof_content, .thread_info {
+	font-family: Arial, Calibri sans-serif;
+	color: var(--color-font);
+}
+body a {
+	font-family: Arial, Calibri sans-serif;
+	color: var(--color-font) !important;
+	transition: 0.5s ease;
+}
+a:hover {
+	color: white !important;
+	transition: 0.5s ease;
+}
+.time, .wgo_block .time, .below_body .time, #sidebar_container .userprof_content .time, .userprof_content .time, .postbitlegacy .posthead .time {
+	/*Время*/
+	color: var(--time-color);
+}
+.forumbit_post .forumrow, .forumbit_post .forumstats li, .forumbit_post .forumstats_2 li, .postbitlegacy .lastedited, .threadbit .threadnotification {
+	/*Малозаметный*/
+	color: var(--font1) !important;
+}
+.wgo_block .blocksubhead, #sidebar_container .blocksubhead, li.activitybit, dl.stats dd, .userprof_title, .shade, em, li.userprof_content, .postbitlegacy .postrow, .postbitlegacy .userinfo .usertitle, .postbitlegacy dl.userinfo_extra dt, .threadbit .threadtitle, .threadbit .threadmeta, .threadbit .threadlastpost dd, .threadbit .threadpostedin p, .searchtitle, #sidebar_container .blockbody, #pollinfo .polltitle, #pollinfo .blockhead .totalvotes {
+	/*Сильнозаметный*/
+	color: var(--font3) !important;
+}
+.wgo_block .section, dl.stats dt, #sidebar_container .userprof_content .blockrow, .moreactivity span, .moreactivity a, .formcontrols .blockrow .description, .postbitlegacy dl.userinfo_extra dd, .postbitlegacy, .postbitlegacy .posthead, .above_threadlist .threadpagenav .threadpagestats, .above_postlist .pagination_top .postpagestats, .threadbit .threadstats li {
+	/*Среднезаметный*/
+	color: var(--font2) !important;
+}
+/*Цитаты*/
+.bbcode_container div.bbcode_quote div.message, .bbcode_postedby {
+	color: var(--font3) !important;
+}
+.bbcode_container div.bbcode_quote div.message {
+	background-image: url(images/wow-circle/icons/bbquote.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding-top: 25px;
+}
+blockquote div.quote_expander > a {
+	display: none;
+}
+.bbcode_postedby {
+	background: var(--quote-top);
+	border-top-left-radius: 5px;
+	margin-top: -20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.bbcode_container div.bbcode_quote {
+	border: 1px var(--border) solid;
+	border-top-left-radius: 5px;
+}
+.bbcode_container pre.bbcode_code, blockquote.preview .bbcode_container pre.bbcode_code {
+	background: #1c1c1c;
+	background: rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	color: #eee;
+	font-family: 'Bitstream Vera Sans Mono', 'Lucida Console', 'Courier New', Monaco, Courier, monospace;
+	line-height: normal;
+	margin: 20px 0;
+	padding: 20px;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	border-top: 1px var(--border) solid;
+	border-left: 1px var(--border) solid;
+	border-bottom: 0;
+	border-right: 0;
+	min-height: 50px;
+	max-height: 160px;
+}
+.bbcode_container div.bbcode_quote {
+	background: #1c1c1c;
+	background: rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: padding-box;
+	color: #eee;
+	font-family: 'Bitstream Vera Sans Mono', 'Lucida Console', 'Courier New', Monaco, Courier, monospace;
+	line-height: normal;
+	margin: 20px 0;
+	padding: 20px;
+	word-break: break-all;
+	word-wrap: break-word;
+	border: 0;
+	font-style: normal;
+	position: relative;
+}
+.quote_expander {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 12px;
+	text-align: center;
+	color: rgb(63, 63, 63);
+	cursor: pointer;
+	padding-top: 65px;
+	background: -webkit-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+	background: -moz-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+	background: -o-linear-gradient(top, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+	background: linear-gradient(to bottom, rgba(45, 45, 45, 0) 0%, var(--main-color) 80%);
+	position: relative;
+	display: none;
+}
+body > div.body_wrapper, #yuievtautoid-0 > div.body_wrapper {
+	/*Цвет на задней картинке*/
+	background: linear-gradient(to top, var(--body-color) 0%, transparent 100%);
+}
+.wgo_block .blockbody, .thread_info .blockbody {
+	background: #646262;
+}
+.footer {
+	clear: both;
+	margin-top: 15px;
+	text-align: right;
+	display: block;
+	-moz-box-shadow: -2px 2px 2px #c8c8c8;
+	-webkit-box-shadow: -2px 2px 2px #c8c8c8;
+	box-shadow: -2px 2px 2px #c8c8c8;
+	background: #000201 none;
+	padding: 5px 0px 5px 0px;
+	border: 1px solid var(--border);
+	color: #827972;
+	font: normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+}
+.toplinks {
+	/*Строка навигации*/
+	position: absolute;
+	right: 0px;
+	top: 0;
+	color: #ffffff;
+	font: normal normal normal 12px Arial, Tahoma, Calibri, Verdana, Geneva, sans-serif;
+	text-align: right;
+}
+.toplinks .notifications a.popupctrl {
+	background-color: var(--main-bg-color);
+}
+.toplinks ul.isuser .notifications .popupbody li a {
+	background: var(--main-bg-color);
+	border: 0;
+}
+.toplinks ul.isuser .notifications .popupbody li {
+	border-top: 1px var(--main-color) solid;
+}
+.toplinks ul.isuser .notifications .popupbody li a:hover {
+	background: var(--main-color);
+}
+.toplinks ul.isuser .notifications .popupbody {
+	background: var(--main-bg-color);
+	border-color: var(--main-color);
+	border-top: 0;
+}
+#toplinks > ul > li.welcomelink > a {
+	background: none;
+}
+.toplinks .notifications a.popupctrl:hover, .toplinks .nonotifications a.popupctrl:hover, .toplinks .nonotifications a.popupctrl.active, .toplinks .notifications a.popupctrl.active {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 15px;
+	background: no-repeat right center var(--main-bg-color) url(images/wow-circle/misc/arrow.png);
+}
+.toplinks ul.isuser li a:hover {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	background: var(--main-bg-color);
+	color: rgb(255, 255, 255);
+}
+.popupbody {
+	font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+	color: #fff;
+	padding: 2px;
+	background: var(--main-bg-color) none;
+	border: 0px solid var(--border);
+	position: absolute;
+	z-index: 1000;
+	top: 1.5em;
+	left: 0;
+	display: none;
+	min-width: 200px;
+}
+.popupbody li a, .popupbody li label {
+	display: block;
+	background: none;
+	text-decoration: none;
+	text-align: left;
+	white-space: nowrap;
+}
+.toplinks .nonotifications .popupbody a {
+	color: #000000;
+	background: var(--main-bg-color) none;
+	float: none;
+	clear: none;
+	padding: 0 5px;
+	margin-left: 0;
+	text-align: left;
+	line-height: 26px;
+}
+.popupbody li > a:hover, .popupbody li > label:hover {
+	color: #fff;
+	background: var(--main-color) none;
+}
+.popupbody li {
+	border-color: var(--border);
+}
+.popupbody li > label {
+	background: var(--main-color);
+	color: var(--color-font);
+}
+.popupbody li > a {
+	color: #fff;
+	background: var(--main-bg-color) none;
+}
+#yui-gen3 > li:nth-child(5) > a, #yui-gen6 > li:nth-child(3) > a, #yui-gen9 > li:nth-child(5) > a {
+	border-bottom-left-radius: 7px;
+}
+.toplinks .nonotifications .popupbody a:hover {
+	color: #fff;
+	background: var(--main-color) none;
+	text-decoration: underline;
+	padding: 0 5px;
+}
+#searchtypeswitcher li a {
+	display: block;
+	padding: 5px 10px;
+	margin-right: 5px;
+	background-color: var(--main-color);
+	float: left;
+	clear: right;
+	color: #ffffff;
+	text-decoration: none;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.forumbit_nopost .subforumdescription, .userprof_headers, .threadlisthead {
+	/*Цвет под шапкой*/
+	color: #fff4ed;
+	background: var(--main-bg-color);
+	background-repeat: repeat-x;
+}
+.postbitlegacy .posthead {
+	background: rgba(0, 0, 0, .59);
+	border-top: 1px var(--border) solid;
+}
+#forumbits.forumbits .forumhead {
+	border-color: var(--border);
+}
+.navlinks {
+	background: var(--main-bg-color);
+	border-top: 1px solid var(--border);
+	padding: 10px 0;
+	text-align: center;
+	color: #5d5d5d;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	clear: both;
+}
+.threadbit .threadstats li, .forumbit_post .forumstats li, .forumbit_post .forumstats_2 li {
+	/*Просмотры тем*/
+	background: #30302f;
+	width: 70px;
+}
+.forumbit_post .forumstats li:first-child, .forumbit_post .forumstats_2 li:first-child, .threadbit .threadstats li:first-child, #forum186 > div.forumbit_post.L2 > div > ul.forumstats_2.td > li:nth-child(1) {
+	background: #414140;
+}
+.toolsmenu #forumtools h6 a, .toolsmenu #threadtools h6 a {
+	background: url(images/wow-circle/icons/hammer.png) var(--main-bg-color) no-repeat;
+	background-position: 5px 6px;
+	background-size: 13px;
+	padding-left: 23px;
+	border-top: 1px var(--border) solid;
+}
+.postbitlegacy .imlinks a:nth-child(1) > img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654038559975669760/vk.png);
+}
+.postbitlegacy .imlinks a:nth-child(2) > img {
+	content: url(https://cdn.discordapp.com/attachments/575078879572656128/654038562223947806/dc.png);
+}
+.blockfoot, .blocksubfoot, #comparelist li {
+	background: var(--body-color);
+	color: var(--color-font);
+}
+#comparelist li.remove {
+	background: #b37676cc;
+	color: #b30a0a;
+}
+#comparelist li.add {
+	background-color: rgb(80, 113, 80);
+	color: rgb(13, 45, 24);
+}
+/*Календарь*/
+.month .othermonth {
+	background: rgb(27, 30, 37) none;
+}
+.calendar .events.today, .calendar .today {
+	background: #1c354a;
+}
+dl.tabslight dd a {
+	background: var(--main-bg-color);
+	border: 1px var(--border) solid;
+}
+dl.tabslight dd a:hover {
+	background: var(--main-color);
+}
+html > body dl.tabslight dd.selected a {
+	background: var(--main-color);
+	border-top: 1px var(--border) solid;
+}
+html > body dl.tabslight dd.selected a:hover {
+	background: var(--main-color);
+	border-top: 1px var(--border) solid;
+}
+dl.tabslight {
+	border-bottom-color: var(--border);
+}
+/*Альбомы*/
+#album_content .blockbody, #latestalbumcontainer li, #albumlist .blockbody, .albumlist_entry, #content .blockrow > li, #content .blockrow > ol, #content .blockrow > div, li.sgicon .maincol, #sidebar_container .blockbody, #sidebar li.sgicon .maincol {
+	background: var(--main-bg-color);
+	border-radius: 0;
+}
+/*Строка поиска*/
+.globalsearch input.textbox {
+	width: 160px;
+	height: 20px;
+	margin-top: -10px;
+	border: none;
+	box-shadow: none;
+	background: #ece9e9 url(https://cdn.discordapp.com/attachments/575078879572656128/654035978167648257/search.png) 4px 50% no-repeat;
+	text-indent: 25px;
+}
+.toolsmenu #forumsearch h6 a, .toolsmenu #searchthread h6 a {
+	background: url(https://cdn.discordapp.com/attachments/575078879572656128/654035978167648257/search.png) var(--main-bg-color) no-repeat;
+	background-repeat: no-repeat;
+	background-position: 5px 6px;
+	background-size: 13px;
+	padding-left: 23px;
+}
+.toolsmenu .popupgroup a.popupctrl, .toolsmenu .popupgroup .popupmenu a.popupctrl, .toolsmenu .popupgroup .popupmenu:hover a.popupctrl, .toolsmenu .popupgroup .popupmenu:hover .popupctrl a.popupctrl.active {
+	border-top: 1px var(--border) solid;
+	border-left: 0;
+	border-right: 0;
+}
+.toolsmenu #threadrating h6 a {
+	background: url(images/wow-circle/icons/rating.png) var(--main-bg-color) no-repeat;
+	background-repeat: no-repeat;
+	background-position: 5px 6px;
+	background-size: 13px;
+	padding-left: 23px;
+}
+.toolsmenu #displaymodes h6 a {
+	background: url(images/wow-circle/icons/display.png) var(--main-bg-color) no-repeat;
+	background-position: 5px 6px;
+	background-size: 13px;
+	padding-left: 23px;
+	border-top: 1px var(--border) solid;
+}
+#navbar_notice_7 {
+	/*Актуальные"Новости"*/
+	background: var(--main-bg-color);
+	border: 1px var(--border) solid;
+}
+#navbar_notice_7 > strong > b > p:nth-child(3) > a > mark {
+	background: transparent;
+	color: var(--color-font);
+}
+#navbar_notice_7 > strong > b > p:nth-child(3) > a:nth-child(1) > span, #navbar_notice_7 > strong > b > span {
+	/*Лечим ссылки Актуальные новости"*/
+	color: var(--color-font) !important;
+	transition: 0.5s ease;
+}
+#navbar_notice_7 > strong > b > p:nth-child(3) > a:nth-child(1) > span:hover {
+	color: white !important;
+	transition: 0.5s ease;
+}
+/*Верхушка Новые сообщения Личные сообщение Справка...*/
+.navtabs ul {
+	background: var(--main-color);
+	border-bottom-left-radius: 10px;
+}
+/*Верхушка Форум Альбомы Группы... Выбрано*/
+.navtabs li.selected a.navtab {
+	background: var(--main-color);
+	background-repeat: no-repeat;
+	position: relative;
+	border-top: 1px var(--time-color) solid;
+}
+/*Верхушка Форум Альбомы Группы... Не выбрано*/
+.navtabs li a.navtab {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	line-height: 28px;
+	min-width: 50px;
+	background: var(--main-bg-color);
+}
+.navtabs li a.navtab:hover {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	line-height: 28px;
+	min-width: 50px;
+	background: var(--main-color);
+}
+.forumhead, .wgo_block .blockhead, #sidebar_container .blocksubhead, .toolsmenu, .forum_info .blockhead, h2.searchlisthead, .thread_info h4 {
+	/*Шапка заголовков разделов*/
+	background: var(--main-color) none;
+}
+#cat13 > div > div > p {
+	background: var(--main-bg-color);
+}
+.forumhead + .childforum .L2:first-child .forumrow, .forumbit_post:nth-child(odd) .forumrow, .forumbit_post:nth-child(even) .forumrow {
+	background: none !important;
+	border: none;
+}
+/*Фон для разделов на главной*/
+.forumbit_post, .forumbit_post:nth-child(odd) .forumrow {
+	background: linear-gradient( to top, var(--main-color), var(--main-bg-color)) !important;
+	border-bottom: 1px solid;
+}
+#sidebar_container.member_summary {
+	/*Там, где аватарка*/
+	width: 250px;
+	clear: right;
+	border-radius: 5px;
+	box-shadow: -2px 2px 2px #c8c8c8;
+	background: none;
+	border: 0px var(--border) solid;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 0;
+}
+/*Тоже там, где аватарка, только ниже*/
+#sidebar_container .userprof_content .blockrow {
+	background: var(--main-bg-color);
+	background-image: none;
+	background-repeat: repeat;
+	border-color: var(--border);
+}
+.member_summary dl.stats dt, .member_summary dl.stats dd {
+	font-size: 12px;
+	margin: 3px;
+}
+/*Активность в профиле*/
+li.userprof_content {
+	margin-bottom: .5em;
+	color: #333333;
+	background-image: none;
+	background-repeat: repeat;
+}
+.userprof_content {
+	background: var(--body-color);
+	color: var(--color-font);
+}
+li.activitybit, li.userprof_content, .userprof_moduleinactive, .formcontrols .blockrow, .blockbody {
+	overflow: hidden;
+	font-weight: normal;
+	font-family: inherit;
+	font-size: 13px;
+	margin: 0px 0px 10px 0px;
+	border: none;
+	padding: 10px;
+	background: var(--main-bg-color) none;
+}
+.profile_editor_border, .profile_content .actionbuttons {
+	border: none;
+}
+.blockfoot {
+	background: none;
+}
+.pagination span a, .pagination span a.popupctrl, .popupbody li.formsubmit {
+	background: var(--main-bg-color);
+	border-color: var(--border);
+}
+.pagination span a.popupctrl {
+	background: no-repeat center left url(https://i.imgur.com/Q5bPkJb.png) var(--main-bg-color);
+	border-color: var(--border);
+}
+.pagination span a.popupctrl:hover {
+	background: no-repeat center left url(https://i.imgur.com/kPYpoPC.png) var(--main-color);
+	border-color: var(--border);
+}
+.pagination span a:hover, .button:hover {
+	background: var(--main-color);
+	border-color: var(--border);
+}
+.pagination span.selected a, .button {
+	background: var(--main-color);
+}
+/*Шапка в личном кабинете*/
+dd.userprof_moduleinactive {
+	background: var(--main-bg-color);
+	margin: 0;
+	padding: 0 15px;
+	transition: 0.2s ease;
+	border-top: 1px var(--border) solid;
+	border-left: 1px var(--border) solid;
+	border-right: 1px var(--border) solid;
+}
+dd.userprof_moduleinactive:hover {
+	background: var(--main-color);
+	margin: 0;
+	padding: 0 15px;
+	transition: 0.2s ease;
+	border-top: 1px var(--border) solid !important;
+	border-left: 1px var(--border) solid !important;
+	border-right: 1px var(--border) solid !important;
+}
+dl.tabslight dd.userprof_module a {
+	color: #ffffff;
+	background: none;
+	border: none;
+}
+dd.userprof_module {
+	background: var(--main-color);
+	font-weight: bold;
+	display: inline;
+	padding: 0 15px;
+	line-height: 22px;
+	font-size: 14px;
+	border-top: 1px var(--time-color) solid;
+}
+dd.userprof_module:hover {
+	background: var(--main-color);
+	font-weight: bold;
+	display: inline;
+	padding: 0 15px;
+	line-height: 22px;
+	font-size: 14px;
+	border-top: 1px var(--time-color) solid;
+}
+.memberprofiletabunder {
+	background-color: var(--main-bg-color);
+	background-image: none;
+	background-repeat: repeat-x;
+	border-top: 1px var(--border) solid;
+	border-bottom: 1px var(--border) solid;
+}
+.as-tabs dd {
+	background: var(--main-bg-color);
+	border: none;
+	padding: 0 5px;
+	transition: 0.2s ease;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom: 1px var(--border) solid;
+	border-left: 1px var(--border) solid;
+	border-right: 1px var(--border) solid;
+}
+.as-tabs dd:hover {
+	background: var(--main-color);
+	border: none;
+	padding: 0 5px;
+	transition: 0.2s ease;
+	border-bottom: 1px var(--border) solid;
+	border-left: 1px var(--border) solid;
+	border-right: 1px var(--border) solid;
+}
+.activitystream_block dd.selected {
+	background: var(--main-bg-color);
+	border: none;
+	border-bottom: 1px var(--time-color) solid;
+}
+#activity_tab_container > div {
+	overflow: hidden;
+	background: transparent;
+}
+.activitystream_block dd.selected {
+	background: var(--main-color);
+}
+#message_list .postbit {
+	background: var(--main-bg-color);
+}
+/*Кнопка Изменить стиль профиля*/
+.userprof_button {
+	position: relative;
+	padding: 3px;
+	bottom: 5px;
+	margin: 0;
+	border: 2px var(--border) solid;
+	background: var(--main-color);
+	border-radius: 5px;
+	color: var(--color-font);
+	transition: 0.2s ease;
+	font-family: Calibri;
+}
+.userprof_button:hover {
+	position: relative;
+	padding: 3px;
+	bottom: 5px;
+	margin: 0;
+	border: 2px var(--main-color) solid;
+	background: var(--main-bg-color);
+	border-radius: 5px;
+	color: var(--color-font);
+	transition: 0.2s ease;
+}
+#searchform > input.searchimg {
+	background: transparent;
+}
+#groupsearch .searchimg {
+	vertical-align: top;
+	padding: 2px;
+	position: relative;
+	left: -3px;
+}
+#groupsearch input {
+	background: #ece9e9;
+	color: #ece9e9;
+	border-radius: 3px;
+}
+/*Приват*/
+#usercp_nav .blockrow * a {
+	margin-left: -9px;
+	margin-right: -9px;
+}
+#usercp_nav .blockrow .active {
+	background: var(--main-color);
+}
+#usercp_nav .blockrow .active {
+	margin-left: -9px;
+	margin-right: -9px;
+}
+#usercp_nav .blockbody {
+	border: 1px solid var(--border);
+	border: none;
+	background: var(--main-bg-color) none;
+}
+#usercp_nav .blockrow {
+	background: var(--main-bg-color) none;
+	padding: 1px 10px;
+}
+#usercp_nav * a:hover {
+	background: var(--main-color) !important;
+}
+#usercp_nav li a.usercp_folder-left:hover {
+	background: no-repeat 10px 4px var(--main-color) url(images/wow-circle/cms/sections.png) !important;
+}
+#usercp_nav .blocksubhead {
+	background: var(--main-color);
+	border: 1px var(--border) solid;
+}
+.blocksubhead {
+	background: var(--main-color);
+	border-bottom: 1px var(--border) solid;
+}
+.blockhead {
+	background: var(--main-color) !important;
+}
+.blockbody.settings_form_border {
+	border-right: 1px solid var(--border);
+	border-left: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+.pmlist .blockrow {
+	background: var(--main-bg-color);
+	border-left: 1px var(--border) solid;
+	border-right: 1px var(--border) solid;
+}
+.navpopupmenu .popupctrl .ctrlcontainer, .navpopupmenu.popupmenu.nohovermenu a.popupctrl span.ctrlcontainer {
+	background: transparent url(images/wow-circle/misc/black_downward_arrow.png) no-repeat -5px;
+	padding-left: 15px;
+	white-space: nowrap;
+	position: relative;
+}
+.navpopupmenu.popupmenu.nohovermenu a.popupctrl, .navpopupmenu.popupmenu.nohovermenu a.textcontrol, a.textcontrol, .actionbuttons .group .button, #inlinemod_formctrls .popupctrl {
+	background: var(--main-color) !important;
+	transition: 0.2s ease;
+}
+.navpopupmenu.popupmenu.nohovermenu a.popupctrl:hover, .navpopupmenu.popupmenu.nohovermenu a.textcontrol:hover, a.textcontrol:hover, .actionbuttons .group .button:hover {
+	background: var(--main-bg-color) !important;
+	transition: 0.2s ease;
+}
+/*Справка*/
+.faqlinks {
+	background: repeat-x center bottom transparent;
+}
+.faqblock .blockbody, .faqtext + .faqlinks {
+	border-color: var(--border);
+}
+.postbitlegacy, .postbitlegacy .postbody, .postbitlegacy .postdetails, .postbitlegacy .userinfo, #inlinemod_formctrls .popupctrl:hover {
+	background: var(--main-bg-color) !important;
+}
+.postbitlegacy .postfoot .textcontrols {
+	background: #181819;
+	border-color: var(--border);
+}
+.postbitlegacy .postfoot .textcontrols, .threadlisthead {
+	border-top: 1px var(--border) solid;
+	border-bottom: 1px var(--border) solid;
+}
+.postbitlegacy .postfoot .textcontrols a.newreply, .postbit .postfoot .textcontrols a.newreply {
+	background: url(images/wow-circle/buttons/quote_40b.png) no-repeat left;
+}
+.postbitlegacy .postfoot .textcontrols a {
+	background: transparent;
+}
+.postbitlegacy .postfoot .textcontrols a.redcard {
+	background: url(images/wow-circle/buttons/red-card_sm.png) no-repeat transparent left;
+	padding: 0px 0px 0px 0px;
+	padding-left: 20px;
+	border: 0px solid #a8a8a8;
+}
+.postbitlegacy .postfoot .textcontrols a.quickreply, .postbit .postfoot .textcontrols a.quickreply, .postbitlegacy .postfoot .textcontrols a.forwardpost, .postbit .postfoot .textcontrols a.forwardpost {
+	background: url(images/wow-circle/buttons/reply_40b.png) no-repeat transparent left;
+}
+.postbitlegacy .postfoot .textcontrols a.editpost {
+	background: url(images/wow-circle/buttons/edit_40b.png) no-repeat transparent left;
+}
+.postbitlegacy .postfoot .textcontrols a.multiquote, .postbit .postfoot .textcontrols a.multiquote {
+	background: url(images/wow-circle/buttons/multiquote-back_40b.png) no-repeat transparent left;
+}
+.postbit .postfoot .textcontrols a.multiquote:hover {
+	background: url(images/wow-circle/buttons/multiquote-back_40b.png) no-repeat transparent left;
+}
+.postbitlegacy .postfoot .textcontrols a.infraction, .postbit .postfoot .textcontrols a.infraction {
+	background: url(images/wow-circle/buttons/add-infraction_sm.png) no-repeat transparent left;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover {
+	background: url(images/wow-circle/buttons/post_thanks.png) no-repeat transparent left;
+}
+.threadbit, .threadbit:nth-child(even) .sticky, .threadbit:nth-child(odd) .sticky, .threadbit:nth-child(odd) .nonsticky, .threadbit:nth-child(even) .nonsticky {
+	background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+	border-bottom: 1px solid;
+	opacity: 0.9;
+	transition: 0.1s ease;
+}
+/*Сердечко*/
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover {
+	background: url(https://i.imgur.com/bqUFVXn.png) no-repeat transparent left;
+	opacity: 1;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button {
+	background: url(https://i.imgur.com/bqUFVXn.png) no-repeat transparent left;
+	opacity: 0.9;
+}
+/*Кнопка Новая тема, закрытая тема*/
+.newcontent_textcontrol {
+	background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+	border-radius: 4px;
+	color: rgb(255, 255, 255);
+	padding: 6px 15px 6px 15px;
+	border: 0;
+	opacity: 0.8;
+	transition: 0.3s ease;
+}
+.newcontent_textcontrol:hover {
+	background: linear-gradient( to top, var(--main-color), var(--main-bg-color));
+	border-radius: 4px;
+	color: rgb(255, 255, 255);
+	padding: 6px 15px 6px 15px;
+	border: 0;
+	opacity: 1;
+	transition: 0.3s ease;
+}
+/*Вставить изображение*/
+.cke_skin_kama .cke_dialog_title {
+	color: var(--color-font);
+}
+.cke_skin_kama .cke_dialog .cke_dialog_body {
+	background: var(--main-color) none;
+}
+.cke_skin_kama .cke_dialog_contents * {
+	color: var(--color-font);
+}
+.cke_skin_kama .cke_dialog_body .cke_dialog_tabs a.cke_dialog_tab_selected, .cke_skin_kama .cke_dialog_contents .cke_dialog_footer {
+	background: var(--main-bg-color);
+	border-color: var(--border);
+	background-image: none;
+	cursor: pointer;
+}
+.cke_skin_kama .cke_dialog_body .cke_dialog_tabs a.cke_dialog_tab {
+	background: var(--main-color);
+	background-image: none;
+}
+.cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok, .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel {
+	background: var(--main-color);
+}
+.cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_ok:hover, .cke_skin_kama .cke_dialog_contents a.cke_dialog_ui_button_cancel:hover {
+	background: var(--body-color);
+	cursor: pointer;
+}
+.cke_skin_kama a.cke_dialog_ui_button_ok span, .cke_skin_kama a.cke_dialog_ui_button_cancel span {
+	cursor: pointer;
+	background: transparent;
+}
+#uploadbutton {
+	background: var(--main-color);
+	padding: 7px;
+	margin-top: 10px;
+	width: auto;
+	height: auto;
+	font-size: 15px;
+	transition: 0.2s ease;
+	border: 1px var(--border) solid;
+	border-radius: 8px;
+}
+#uploadbutton:hover {
+	background: var(--main-bg-color);
+	padding: 7px;
+	margin-top: 10px;
+	width: auto;
+	height: auto;
+	font-size: 15px;
+	transition: 0.2s ease;
+	border: 1px var(--border) solid;
+	border-radius: 8px;
+}
+.cke_skin_kama .cke_dialog_contents .cke_dialog_contents {
+	background: var(--main-bg-color);
+}
+.cke_skin_kama .cke_dialog input[type="file"] {
+	margin-top: 10px;
+	min-width: 330px;
+	width: 330px;
+	height: auto;
+	font-size: 20px;
+}
+.cke_skin_kama .cke_dialog_body .cke_dialog_close_button span {
+	border: 2px solid #fff;
+	color: #ffffff;
+	border-radius: 33%;
+	font-size: 15px;
+	padding: 5px;
+	margin: 5px;
+	bottom: 10px;
+	right: 10px;
+	position: relative;
+	transition: 0.2s ease;
+}
+.cke_skin_kama .cke_dialog_body .cke_dialog_close_button span:hover {
+	border: 2px solid #fff;
+	color: #000;
+	border-radius: 33%;
+	font-size: 15px;
+	padding: 5px;
+	margin: 5px;
+	bottom: 10px;
+	right: 10px;
+	position: relative;
+	transition: 0.2s ease;
+}
+.cke_skin_kama .cke_dialog_body .cke_dialog_title {
+	border-bottom: 1px var(--border) solid;
+	padding: 10px;
+}
+div.forum_info .blockbody, .block .blockbody {
+	background: var(--main-bg-color);
+	color: var(--color-font);
+}
+#searchbits .threadstats {
+	width: 15%;
+}
+.threadbit .threadlastpost dd {
+	height: auto;
+	margin: 0;
+}
+.threadbit .threadstats {
+	padding-bottom: 15px;
+}
+/*Двойная стрелка вправо*/
+span.first_last img {
+	content: url(https://i.imgur.com/LDQY9IL.png);
+}
+/*Двойная стрелка влево*/
+span.first_last [rel=start] img {
+	content: url(https://i.imgur.com/LDQY9IL.png);
+	transform: rotate(180deg);
+}
+/*Фикс плавающих стрелок*/
+.pagination span.prev_next a, .pagination span.first_last a {
+	top: 0 !important;
+}
+span.prev_next img {
+	content: url(https://i.imgur.com/cL2IcAB.png);
+}
+span.prev_next [rel=prev] img {
+	content: url(https://i.imgur.com/cL2IcAB.png);
+	transform: rotate(180deg);
+}
+div.postdetails span.popupctrl {
+	content: url(https://i.imgur.com/Q5bPkJb.png);
+}
+.floatcontainer li.popupmenu a.popupctrl {
+	background-image: url(https://i.imgur.com/kPYpoPC.png);
+	padding-right: 18px;
+}
+.floatcontainer li.popupmenu a.popupctrl:hover {
+	background-image: url(https://i.imgur.com/kPYpoPC.png);
+	padding-right: 18px;
+}
+/*Spoiler*/
+.spoiler {
+	background: var(--quote);
+	border: 1px var(--border) solid;
+	position: relative;
+	height: 100%;
+}
+div.spoiler div[id] {
+	position: relative;
+	padding: 10px 125px 10px 10px;
+}
+.spoiler > div {
+	padding-right: 125px;
+	text-overflow: clip;
+	border-top: 0;
+}
+.sphide {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 125px;
+	height: 100%;
+	background-image: linear-gradient(to right, #4d4e58, #626473);
+	font-size: 0;
+}
+.sphide:hover {
+	background-image: linear-gradient(to right, #4d4e58, #818499);
+}
+.spoiler .vsqminus, .spoiler h2 {
+	background: var(--main-color) url(images/wow-circle/misc/icon_plus.png);
+	background-repeat: no-repeat;
+	font: italic normal 13px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	padding: 3px 17px 3px 17px;
+	margin: 0;
+	line-height: 15px;
+	font-weight: bold;
+	cursor: pointer;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+/*Голосование*/
+.polloptionsblock, .pollresultsblock {
+	padding-left: 120px;
+	background: no-repeat 30px 10px url(images/misc/poll_question_mark.png) var(--main-bg-color);
+}
+.memberaction_body.popupbody {
+	background-color: var(--main-color);
+}
+.memberaction_body.popupbody li > a:hover {
+	background-color: var(--main-bg-color);
+}
+/*Уменьшаем награды*/
+.blockrow > img, div.postdetails > div.userinfo > dl > div > div > a > img {
+	transform: scale(0.6);
+	margin: -5px;
+	padding: 0;
+	position: relative;
+}
+.postbit .postfoot .textcontrols a.yellowcard {
+	background: url(images/wow-circle/buttons/yellow-card_sm.png) no-repeat transparent left;
+}
+td.blockrow div a[href*=member], td.blockrow div {
+	display: none;
+}
+div.blockbody td:nth-child(1) img {
+	display: none;
+}
+/*Выбор стиля + поля ввода*/
+select {
+	font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+	color: var(--color-font);
+	background: rgb(0, 0, 2) none;
+	border: 1px solid var(--border);
+	padding: 4px;
+	outline: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+select:focus, input:focus {
+	color: black;
+	background: white;
+	border-color: var(--border);
+	transition: 0.2s ease;
+}
+.textbox:focus, input:focus {
+	color: black;
+	border-color: var(--main-color);
+	transition: 0.5s ease;
+}
+.textbox, input {
+	font: normal 12px Tahoma, Calibri, Verdana, Geneva, sans-serif;
+	color: var(--color-font);
+	background: rgb(0, 0, 2) none;
+	border-color: var(--border);
+}
+.quickedit {
+	border-color: var(--border);
+}
+.attachmentrow {
+	background: var(--main-bg-color);
+	border-color: var(--border);
+}
+/*Страница регистрации*/
+.toplinks .logindetails, .toplinks ul.nouser li a {
+	background: var(--main-bg-color);
+	border-radius: 5px;
+	color: var(--color-font);
+}
+.toplinks form input.loginbutton {
+	background: var(--main-color);
+	border: 0;
+	padding: 4px;
+	width: 50px;
+	border-radius: 5px;
+}
+.toplinks ul.nouser li a:hover, .toplinks form input.loginbutton:hover, td > div:nth-child(2) input.button {
+	background: var(--quote);
+	border-radius: 5px;
+	color: var(--color-font);
+	cursor: pointer;
+	transition: 0.5s;
+}
+td > div:nth-child(2) input.button {
+	transform: scale(1.5);
+}
+/*Миниатюры*/
+.attachments, legend {
+	background: transparent;
+	border: 0;
+	color: var(--color-font);
+	padding-bottom: 3px;
+	font-size: 15px;
+}
+legend img {
+	transform: scale(1.5);
+	padding-bottom: 3px;
+}
+/*Вверх как ВК*/
+#footer_links > li:nth-child(4) > a {
+	position: absolute;
+	float: left;
+	left: 0;
+	top: 0;
+	width: 72px;
+	height: 100%;
+	font-size: 0px;
+	background: linear-gradient(to left, transparent, #ffffff30);
+	opacity: 0.1;
+}
+#footer_links > li:nth-child(4) > a:hover {
+	background: linear-gradient(to left, transparent, #ffffff30);
+	opacity: 1;
+}
+#announcements li div, #announcements li {
+	background-color: var(--main-bg-color);
+}
+#announcements li {
+	border: 5px var(--main-color) solid;
+	opacity: 0.9;
+	left: 0;
+	margin-right: 0;
+	position: relative;
+	width: 99%;
+}
+}
