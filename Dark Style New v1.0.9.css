@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark Circle Forum (WoW Circle Style)
 @namespace https://github.com/Forwy4/forwy
-@version 1.1.0
+@version 1.0.9
 @description Dark style for forum.wowcircle.net
 @author Forwy
 ==/UserStyle== */
@@ -36,7 +36,7 @@
 }
 *::selection {
 	color: black;
-	background-color: #fffffff7 !important;
+	background-color: #d9d3d3f7 !important;
 }
 /*Основное изображение*/
 html {
@@ -1190,7 +1190,7 @@ a.navlink:hover, a.navlink:hover {
 	color: var(--color-font);
 }
 tbody a {
-	color: #001F60 !important;
+	color: red !important;
 }
 tbody a:hover {
 	color: red !important;
