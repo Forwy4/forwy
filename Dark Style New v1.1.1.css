@@ -43,6 +43,16 @@
 		background: no-repeat var(--main-color) url(https://i.imgur.com/w6KrN1c.jpg);
 		position: relative;
 	}
+	#header > div:nth-child(1) > a > img {
+		content: url(https://i.imgur.com/MCmtHh8.png);
+	}
+	li.activitybit .fulllink {
+		background: url(https://i.imgur.com/cL2IcAB.png);
+		background-repeat: no-repeat;
+	}
+	#activitylist > li div div a {
+		margin-left: 10px;
+	}
 	/*Замена значка сообщений (нет новых сообщений)*/
 	.old > .table > .td > img, .old > .L2 > .forumrow > .foruminfo > img {
 		content: url(https://cdn.discordapp.com/attachments/575078879572656128/653203962211729429/forum_new-48.png);
@@ -1233,7 +1243,11 @@
 		box-shadow: none;
 		border-left: 1px dashed;
 		border-right: 1px dashed;
-		border-style: dashed;
+		border-bottom: 1px solid;
+		border-top: none;
+	}
+	#content .blockrow > li:nth-child(1) {
+		border-top: 1px solid;
 	}
 	div.floatcontainer ul.blockrow > li > div.leftcol > a > img {
 		min-height: 100px;
@@ -1247,15 +1261,15 @@
 		border: 1px solid var(--border);
 		border-radius: 3px;
 	}
-	#recentgroups > div > ul > li > div.maincol > div.memberlist > a {
+	#recentgroups > div > ul > li > div.maincol > div.memberlist > a, #mygroups > div > ul > li > div.maincol > div.memberlist > a {
 		max-width: 30px;
 		max-height: 30px;
 	}
-	#recentgroups > div > ul > li > div.maincol > div.memberlist > a > img {
+	#recentgroups > div > ul > li > div.maincol > div.memberlist > a > img, #mygroups > div > ul > li > div.maincol > div.memberlist > a > img {
 		max-width: 30px;
-		max-height: 30px;
+		margin: auto;
 	}
-	#recentgroups > div > ul > li > div.maincol > p, #w_newgroups > li > div.maincol > p {
+	#recentgroups > div > ul > li > div.maincol > p, #w_newgroups > li > div.maincol > p, #mygroups > div > ul > li > div.maincol > p {
 		color: white;
 		font-weight: bold;
 		padding: 5px;
@@ -1263,5 +1277,30 @@
 	#sidebar_container > ul, #mygroups, #content .blockhead {
 		background: transparent;
 		box-shadow: none;
+	}
+	#collapse_w_newgroups {
+		display: none;
+	}
+	span.blocktitle {
+		margin-top: 2px;
+		margin-left: 1px;
+	}
+	#sidebar_container #sidebar li#newgroups .blockbody {
+		padding: 5px;
+	}
+	#sidebar_container #sidebar li#newgroups .blockbody > li {
+		border-bottom: 1px dotted;
+	}
+	#sidebar_container #sidebar li#newgroups .blockbody > li:nth-last-child(1) {
+		border-bottom: none;
+	}
+	#picturelink > a > img {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+	}
+	#picturecontainer {
+		margin: 0;
 	}
 }
